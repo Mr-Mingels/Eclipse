@@ -21,8 +21,9 @@ export default function useAuth(code) {
                     window.history.pushState({}, null, '/');
                 })
                 .catch((err) => {
-                    console.log(err)
-                })
+                  console.error('Error in /login:', err);
+                  res.sendStatus(400)
+              })              
             }
           },[code])
 
@@ -39,8 +40,9 @@ export default function useAuth(code) {
               setExpiresIn(res.data.expiresIn);
             })
             .catch((err) => {
-              console.log(err);
-            });
+              console.error('Error in /refresh:', err);
+              res.sendStatus(400)
+          })
         }, (expiresIn - 60) * 1000);
       
         return () => clearInterval(interval);
