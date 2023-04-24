@@ -1,0 +1,522 @@
+.homeWrapper {
+    min-height: 100vh;
+    width: 1280px;
+  /*  background: linear-gradient(to right, #0d0702, #1d1615, #1b1412 50%, #231b24, #2c2532);*/
+    background-color: #0d0d0d;
+    margin-left: auto;
+}
+
+.homeNoResults {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 26px;
+    font-weight: 700;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+.homeContent {
+    display: flex;
+    flex-direction: column;
+    padding: 104px 32px 100px 32px;
+}
+
+.homeNavWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1224px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 44px;
+    background: linear-gradient(to right, #000000, #231b25);
+    padding: 10px 30px 10px 30px;
+    z-index: 10;
+}
+
+.homeSignUpBtn {
+    padding: 10px 20px 10px 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.homeLogInBtn {
+    padding: 10px 20px 10px 20px;
+    margin-left: 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.homeLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.heroImgWrapper {
+    height: 450px;
+  /*  padding: 104px 45px 40px 45px; */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+    position: relative;
+}
+
+.heroImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 0px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.logoImg {
+    margin-top: 5px;
+    width: 75px;
+    height: 75px;
+}
+
+.heroImgTitle {
+    position: absolute;
+    bottom: 15px;
+    left: 25px;
+    gap: 10px;
+    font-size: 32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 100;
+    letter-spacing: 24px;
+    background: linear-gradient(to right, #000000, #231b25);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.loadingScreenHome {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+/* MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION */
+
+
+
+
+
+/* RENDERED RECOMMENDED PLAYLISTS RENDERED RECOMMENDED PLAYLISTS RENDERED RECOMMENDED PLAYLISTS RENDERED RECOMMENDED PLAYLISTS */
+
+
+.homeRecommendedPlayListsTitle, .homeTopArtistsTitle, .homeNewReleasesTitle {
+    color: white;
+    font-size: 24px;
+    margin: 40px 0 25px 0;
+}
+
+.homeRecommendedPlayListsResultsWrapper, .homeTopArtistsResultsWrapper, .homeNewReleasesResultsWrapper {
+    display: flex;
+    height: fit-content;
+    flex-wrap: wrap;
+    gap: 24.8px;
+}
+
+.linkHomePlayListBoxWrapper {
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.homePlayListBox {
+    padding: 16px;
+    background: #181818;
+    border: 0px;
+    border-radius: 6px;
+    width: 150px;
+    height: 228px;
+    cursor: pointer;
+}
+
+.homePlayListBox:hover {
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.homePlayListCoverImg {
+    width: 150px;
+    height: 150px;
+    border: 0px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    background-color: #0d0d0d;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+.homePlayListName {
+    color: white;
+    width: 150px;
+    height: 25.6px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.homePlayListDataAndArtistName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #989898;
+    font-size: 14px;
+    height: 22px;
+    font-weight: 400;
+    width: 150px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+
+/* RENDERED RECOMMENDED PLAYLISTS RENDERED RECOMMENDED PLAYLISTS RENDERED RECOMMENDED PLAYLISTS RENDERED RECOMMENDED PLAYLISTS */
+
+
+
+
+/* RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS  */
+
+
+.linkHomeTopArtistBoxWrapper {
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.homeArtistBox {
+    padding: 16px;
+    background: #181818;
+    border: 0px;
+    border-radius: 6px;
+    width: 150px;
+    height: 228px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.homeArtistBox:hover {
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.homeArtistImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #0d0d0d;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 16px;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.homeArtistName {
+    color: white;
+    width: 150px;
+    height: 25.6px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.homeCategoryType {
+    color: #989898;
+    font-size: 14px;
+    height: 22px;
+    font-weight: 400;
+    width: 150px;
+}
+
+
+/* RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS RENDERED TOP ARTISTS  */
+
+
+
+
+
+/* RENDERED NEW RELEASES RENDERED NEW RELEASES RENDERED NEW RELEASES RENDERED NEW RELEASES RENDERED NEW RELEASES RENDERED NEW RELEASES  */
+
+
+.linkHomeAlbumBoxWrapper {
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.homeAlbumBox {
+    padding: 16px;
+    background: #181818;
+    border: 0px;
+    border-radius: 6px;
+    width: 150px;
+    height: 228px;
+    cursor: pointer;
+}
+
+.homeAlbumBox:hover {
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.homeAlbumCoverImg {
+    width: 150px;
+    height: 150px;
+    border: 0px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    background-color: #0d0d0d;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+.homeAlbumName {
+    color: white;
+    width: 150px;
+    height: 25.6px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.homeAlbumDataAndArtistName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #989898;
+    font-size: 14px;
+    height: 22px;
+    font-weight: 400;
+    width: 150px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .homeWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1); /* Adjust the "40px" value to control the shrinking speed */
+    }
+    .homeNavWrapper {
+        width: calc(1224px + (100vw - 1536px) / 1);
+    }
+    .homeContent {
+        padding-left: calc(32px + (100vw - 1536px) / 41);
+        padding-right: calc(32px + (100vw - 1536px) / 41);
+        padding-top: calc(104px + (100vw - 1536px) / 30);
+    }
+    .homeRecommendedPlayListsResultsWrapper, .homeTopArtistsResultsWrapper, .homeNewReleasesResultsWrapper {
+        gap: calc(24.8px + (100vw - 1536px) / 208.3);
+    }
+    .loadingScreenHome {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+@media (max-width: 1536px) {
+    .homeWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1); /* Adjust the "40px" value to control the shrinking speed */
+    }
+    .homeNavWrapper {
+        width: calc(1220px + (100vw - 1536px) / 1);
+    }
+    .homeContent {
+        padding-left: calc(32px + (100vw - 1536px) / 41);
+        padding-right: calc(32px + (100vw - 1536px) / 41);
+        padding-top: calc(104px + (100vw - 1536px) / 30);
+    }
+    .homeRecommendedPlayListsResultsWrapper, .homeTopArtistsResultsWrapper, .homeNewReleasesResultsWrapper {
+        gap: calc(24.8px + (100vw - 1536px) / 208.3);
+    }
+    .loadingScreenHome {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+  @media screen and (min-width: 1520.1px) and (max-width: 1536px) {
+    .homePlayListBox, .homeArtistBox, .homeAlbumBox {
+      width: calc(150px + (100vw - 1536px) / 6.4);
+    }
+    .homePlayListCoverImg, .homeArtistImg, .homeAlbumCoverImg {
+        width: calc(150px + (100vw - 1536px) / 6.4);
+        height: calc(150px + (100vw - 1536px) / 6.4);
+    }
+    .homeArtistName, .homePlayListName, .homeAlbumName {
+        width: calc(150px + (100vw - 1536px) / 6.4);
+    }
+    .homeCategoryType, .homeAlbumDataAndArtistName, .homePlayListDataAndArtistName {
+        width: calc(150px + (100vw - 1536px) / 6.4);
+    }
+  }
+
+  @media screen and (min-width: 1316.1px) and (max-width: 1520px) {
+    .homePlayListBox, .homeArtistBox, .homeAlbumBox {
+      width: calc(188px + (100vw - 1520px) / 5.42);
+      height: calc(266px + (100vw - 1520px) / 5.42);;
+    }
+    .homePlayListCoverImg, .homeArtistImg, .homeAlbumCoverImg {
+        width: calc(188px + (100vw - 1520px) / 5.42);
+        height: calc(188px + (100vw - 1520px) / 5.42);
+    }
+    .homeArtistName, .homePlayListName, .homeAlbumName {
+        width: calc(188px + (100vw - 1520px) / 5.42);
+    }
+    .homeCategoryType, .homeAlbumDataAndArtistName, .homePlayListDataAndArtistName {
+        width: calc(188px + (100vw - 1520px) / 5.42);
+    }
+  }
+
+  @media screen and (min-width: 988.1px) and (max-width: 1316px) {
+    .homePlayListBox, .homeArtistBox, .homeAlbumBox {
+      width: calc(198px + (100vw - 1316px) / 4.48);
+      height: calc(276px + (100vw - 1316px) / 4.48);
+    }
+    .homePlayListCoverImg, .homeArtistImg, .homeAlbumCoverImg {
+        width: calc(198px + (100vw - 1316px) / 4.48);
+        height: calc(198px + (100vw - 1316px) / 4.48);
+    }
+    .homeArtistName, .homePlayListName, .homeAlbumName {
+        width: calc(198px + (100vw - 1316px) / 4.48);
+    }
+    .homeCategoryType, .homeAlbumDataAndArtistName, .homePlayListDataAndArtistName {
+        width: calc(198px + (100vw - 1316px) / 4.48);
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 988px) {
+    .homePlayListBox, .homeArtistBox, .homeAlbumBox {
+      width: calc(189px + (100vw - 988px) / 3.18);
+      height: calc(267px + (100vw - 988px) / 3.18);
+    }
+    .homePlayListCoverImg, .homeArtistImg, .homeAlbumCoverImg {
+        width: calc(189px + (100vw - 988px) / 3.18);
+        height: calc(189px + (100vw - 988px) / 3.18);
+    }
+    .homeArtistName, .homePlayListName, .homeAlbumName {
+        width: calc(189px + (100vw - 988px) / 3.18);
+    }
+    .homeCategoryType, .homeAlbumDataAndArtistName, .homePlayListDataAndArtistName {
+        width: calc(189px + (100vw - 988px) / 3.18);
+    }
+    .homeRecommendedPlayListsResultsWrapper, .homeTopArtistsResultsWrapper, .homeNewReleasesResultsWrapper {
+        gap: calc(15.8px + (100vw - 988px) / 208.3);
+    }
+  }
+
+  
+  
+
+@media screen and (max-width: 800px) {
+    .homeWrapper {
+        width: calc(800px + (100vw - 800px) / 1);
+        margin: 0;
+    }
+    .loadingScreenHome {
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .homeNavWrapper {
+        width: calc(741px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        left: 0;
+    }
+    .homeContent {
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        padding-top: calc(90px + (100vw - 800px) / 30);
+        padding-bottom: 240px;
+    }
+    .homeRecommendedPlayListsResultsWrapper, .homeTopArtistsResultsWrapper, .homeNewReleasesResultsWrapper {
+        gap: calc(24.8px + (100vw - 800px) / 25);
+    }
+    .homePlayListBox, .homeArtistBox, .homeAlbumBox {
+        width: calc(134.4px + (100vw - 800px) / 4.8);
+        height: calc(212.4px + (100vw - 800px) / 4.8);
+      }
+      .homePlayListCoverImg, .homeArtistImg, .homeAlbumCoverImg {
+          width: calc(134.4px + (100vw - 800px) / 4.8);
+          height: calc(134.4px + (100vw - 800px) / 4.8);
+      }
+      .homeArtistName, .homePlayListName, .homeAlbumName {
+          width: calc(134.4px + (100vw - 800px) / 4.8);
+      }
+      .homeCategoryType, .homeAlbumDataAndArtistName, .homePlayListDataAndArtistName {
+          width: calc(134.4px + (100vw - 800px) / 4.8);
+      }
+  }
+
+
+
+
+
+  @media screen and (max-width: 349px) {
+    .homeNavWrapper {
+        left: 0;
+    }
+    .heroImgTitle {
+        font-size: calc(24px + (100vw - 349px) / 10);
+        letter-spacing: calc(24px + (100vw - 349px) / 10);
+        bottom: 10px;
+        left: 15px;
+    }
+    .homeRecommendedPlayListsResultsWrapper, .homeTopArtistsResultsWrapper, .homeNewReleasesResultsWrapper {
+        gap: calc(16px + (100vw - 349px) / 25);
+    }
+    .homePlayListBox, .homeArtistBox, .homeAlbumBox {
+        width: calc(115px + (100vw - 349px) / 2.23);
+        height: calc(193px + (100vw - 349px) / 2.23);
+      }
+      .homePlayListCoverImg, .homeArtistImg, .homeAlbumCoverImg {
+          width: calc(115px + (100vw - 349px) / 2.23);
+          height: calc(115px + (100vw - 349px) / 2.23);
+      }
+      .homeArtistName, .homePlayListName, .homeAlbumName {
+          width: calc(115px + (100vw - 349px) / 2.23);
+      }
+      .homeCategoryType, .homeAlbumDataAndArtistName, .homePlayListDataAndArtistName {
+          width: calc(115px + (100vw - 349px) / 2.23);
+      }
+  }

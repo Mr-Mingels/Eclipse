@@ -1,0 +1,857 @@
+.albumPageWrapper {
+    min-height: 100vh;
+    width: 1280px;
+    margin-left: auto;
+    background: linear-gradient(to top, #0d0d0d 65%, #3b2e3e 100%);
+}
+
+.albumPageLoadingScreen {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 100;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.albumPageNavWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1220px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 44px;
+    padding: 10px 30px 10px 30px;
+    z-index: 1000;
+}
+
+.albumPageLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.albumPageSignUpBtn {
+    padding: 10px 20px 10px 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.albumPageLogInBtn {
+    padding: 10px 20px 10px 20px;
+    margin-left: 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.albumPageDetailsWrapper {
+    height: 340px;
+    width: 1280px;
+}
+
+.albumPageDetailsContent {
+    display: flex;
+    align-items: flex-end;
+    height: 316px;
+    width: 1215px;
+    padding: 0 32px 24px 32px;
+}
+
+.albumPageDetailsImgWrapper {
+    height: 232px;
+    width: 232px;
+    margin-right: 24px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.albumPageImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 60px rgba(0,0,0,.5);
+}
+
+.albumPageDetailsInfoWrapper {
+    color: white;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.albumPageplayListTxt {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.albumPageTitleTxt {
+    margin: 0.08em 0px 0.12em;
+    visibility: visible;
+    font-weight: 700;
+    font-size: 48px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.albumPageUserInfoWrapper {
+    margin: 8px 0 4px 0;
+    height: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.albumPageArtistName, .albumPageNumberOfTracks, .albumPageAlbumReleaseYear, .albumPageFullAlbumTimeLenght {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.albumPageCircleElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 4px;
+    width: 6.4px;
+    height: 19.2px;
+    font-size: 8px;
+}
+
+.albumPageSongsOptionsWrapper {
+    width: 1280px;
+    height: 104px;
+}
+
+.albumPageSongsOptionsContent {
+    width: 1215px;
+    height: 56px;
+    padding: 24px 32px 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.albumPagePlayOptionsImgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 0px;
+    border-radius: 50%;
+    background-color: #653e6f;
+    cursor: pointer;
+}
+
+.albumPagePlayOptionsImgWrapper:hover {
+    transform: scale(1.05);
+}
+
+.albumPagePlayOptionsImg {
+    width: 19px;
+    height: 19px;
+    margin-left: 4px;
+}
+
+.albumPagePlayOptionsImg.paused {
+    width: 21px;
+    height: 21px;
+    margin: 0px;
+}
+
+.albumPageRemoveAlbumToSavedWrapper, .albumPageAddAlbumToSavedWrapper {
+    width: 32px;
+    height: 32px;  
+    margin-top: 8px;
+    position: relative;
+}
+
+.albumPageAddAlbumToSaved, .albumPageRemoveAlbumToSaved {
+    width: 100%;
+    height: 100%;  
+}
+
+.albumPageRemoveAlbumToSavedWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 40px;
+    right: -95px;
+    content: 'Remove from Your Library';
+    width: 200px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.albumPageAddAlbumToSavedWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 40px;
+    right: -70px;
+    content: 'Save to Your Library';
+    width: 160px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.albumPageInfoBar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 38px;
+    padding: 0 16px;
+    margin: 0 32px;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 1;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+.albumPageScrolledInfoBar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 1184px;
+    height: 38px;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 1;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    background-color: #181818;
+    margin: 0;
+    padding: 0 48px;
+    position: fixed;
+    top: 64px;
+}
+
+.albumPageHashTagSec {
+    width: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.albumPageTitleSec {
+    width: 1000px;
+}
+
+.albumPageDurationImgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 127px;
+}
+
+.albumPageDurationImg {
+    width: 17px;
+    height: 17px;
+}
+
+
+/* MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION */
+
+
+
+
+/* ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED */
+
+
+.albumPageResultsWrapper {
+    padding: 16px 32px 100px 32px;     
+}
+
+.albumPageTrackBox {
+    padding: 0 16px;
+    gap: 16px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-weight: 400;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    --toggle-visibility: hidden;
+    --toggle-play-display: none;
+    --toggle-number-display: flex;
+    --toggle-color: #b3b3b3;
+    --toggle-equalizer-display: flex;
+}
+
+.albumPageTrackBox:hover {
+    background-color: rgba(72, 72, 72, 0.5);
+}
+
+.albumPageIndex {
+    color: #b3b3b3;
+    min-width: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.albumPageIndex.playing {
+    color: #7d4c89;
+}
+
+.albumPageEqualizerImgWrapper, .albumPagePlayImgWrapper, .albumPagePauseImgWrapper {
+    min-width: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.albumPagePlayImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 21px;
+    right: -40px;
+    content: 'Play Song';
+    width: 90px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.albumPagePauseImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 21px;
+    right: -40px;
+    content: 'Pause Song';
+    width: 100px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.albumPageEqualizerImg {
+    width: 16px;
+    height: 18px;
+    display: flex;
+}
+
+.albumPagePlayImg, .albumPagePauseImg {
+    width: 14px;
+    height: 14px;
+    display: flex;
+}
+
+.albumPageName-artist-wrapper {
+    width: 1000px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.albumPageName {
+    font-size: 16px;
+    color: white;
+    height: 22px;
+}
+
+.albumPageName.playing {
+    color: #7d4c89;
+}
+
+.albumPagetrackArtistName {
+    font-size: 14px;
+    color: #b3b3b3;
+    height: 18px;
+}
+
+.albumPageAllSongLikedIconImgWrapper {
+    margin-top: 2px;
+    margin-left: 2.5px;
+    margin-right: 14.425px;
+    width: 17px;
+    height: 17px;
+    position: relative;
+}
+
+.albumPageAllSongLikedIconImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 25px;
+    right: -70px;
+    content: 'Add to Liked Songs';
+    width: 150px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.albumPageAllSongLikedIconImg {
+    width: 17px;
+    height: 17px;
+}
+
+.albumPageAllSongLikedIconImgWrapper.liked:hover::before {
+    content: 'Remove From Liked Songs';
+    width: 205px;
+    right: -95px;
+}
+
+.albumPageEndOfTrackBoxWrapper {
+    display: flex;
+    width: 127px;
+    align-items: center;
+    height: 56px;
+    color: #b3b3b3;
+}
+
+.albumPageDuration {
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.albumPageMoreOptionsWrapper {
+    position: relative;
+}
+
+.albumPageMoreOptionsImgWrapper {
+    margin-left: 20px;
+    width: 17px;
+    height: 17px;
+    position: relative;
+}
+
+.albumPageMoreOptionsImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    content: 'More Options';
+    bottom: 24px;
+    right: -45px;
+    width: 110px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.albumPageMoreOptionsImg {
+    width: 17px;
+    height: 17px;
+    visibility: hidden;
+}
+
+.albumPageOpenMoreOptionsModalModalWrapper {
+    position: absolute;
+    width: 188px;
+    right: 0;
+    height: fit-content;
+    background-color: #282828;
+    display: flex;
+    padding: 4px;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+}
+
+.albumPageOpenMoreOptionsModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.albumPageAddToPlayListHoverBtn {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    width: 164px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.albumPageAddToPlayListHoverBtn:hover {
+    background-color: #484848;
+}
+
+.albumPageAddToPlayListArrowImg {
+    width: 17px;
+    height: 17px;
+    transform: rotate(90deg);
+    margin-left: auto;
+}
+
+.albumPageSavedPlayListsWrapper {
+    position: absolute;
+    top: -200px;
+    right: 190px;
+    width: 250px;
+    height: 260px;
+}
+
+.albumPageSavedPlayListsContent {
+    width: 100%;
+    background-color: #282828;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+}
+
+.albumPageRenderedPlayListBtn {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    width: 250px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 0px;
+}
+
+.albumPageRenderedPlayListBtn:hover {
+    background-color: #484848;
+}
+
+.albumPageCopyRightInfo {
+    color: #b3b3b3;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.albumPageCopyRightDate {
+    font-size: 0.875rem;
+    font-weight: 700;
+    height: 25px;
+}
+
+.albumPageCopyRightTxt {
+    font-size: 0.6875rem;
+    font-weight: 400;
+    height: 19px;
+}
+
+
+
+
+
+
+
+.loadingScreenAlbumPage {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    z-index: 100;
+    width: 1280px;
+    color: transparent;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .albumPageWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .albumPageNavWrapper {
+        width: calc(1220px + (100vw - 1536px) / 1);
+       }
+       .loadingScreenAlbumPage {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .albumPageUserInfoWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .albumPageDetailsContent {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+            padding-left: calc(32px + (100vw - 1536px) / 45.9);
+            padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .albumPageDetailsImgWrapper {
+        width: calc(232px + (100vw - 1536px) / 18.36);
+            height: calc(232px + (100vw - 1536px) / 18.36);
+       }
+       .albumPageTitleTxt {
+        font-size: calc(96px + (100vw - 1536px) / 15.3);
+       }
+       .albumPageSongsOptionsWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .albumPageSongsOptionsContent {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+            padding-left: calc(32px + (100vw - 1536px) / 45.9);
+            padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .albumPageResultsWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+            padding-left: calc(32px + (100vw - 1536px) / 45.9);
+            padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .albumPageInfoBar {
+            margin-left: calc(32px + (100vw - 1536px) / 45.9);
+            margin-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .albumPageScrolledInfoBar {
+        padding-left: calc(48px + (100vw - 1536px) / 45.9);
+        padding-right: calc(48px + (100vw - 1536px) / 45.9);
+       }
+       .albumPageTitleSec {
+        width: calc(1000px + (100vw - 1536px) / 1.27);
+       }
+       .albumPageName-artist-wrapper {
+        width: calc(1000px + (100vw - 1536px) / 1.27);
+       }
+  }
+
+@media (max-width: 1536px) {
+   .albumPageWrapper {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .albumPageNavWrapper {
+    width: calc(1220px + (100vw - 1536px) / 1);
+   }
+   .loadingScreenAlbumPage {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .albumPageUserInfoWrapper {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .albumPageDetailsContent {
+    width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .albumPageDetailsImgWrapper {
+    width: calc(232px + (100vw - 1536px) / 18.36);
+        height: calc(232px + (100vw - 1536px) / 18.36);
+   }
+   .albumPageTitleTxt {
+    width: calc(950px + (100vw - 1536px) / 1.1);
+    font-size: calc(96px + (100vw - 1536px) / 15.3);
+   }
+   .albumPageUserInfoWrapper {
+    width: calc(950px + (100vw - 1536px) / 1.1);
+   }
+   .albumPageSongsOptionsWrapper {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .albumPageSongsOptionsContent {
+    width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .albumPageResultsWrapper {
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .albumPageInfoBar {
+        margin-left: calc(32px + (100vw - 1536px) / 45.9);
+        margin-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .albumPageScrolledInfoBar {
+    padding-left: calc(48px + (100vw - 1536px) / 45.9);
+    padding-right: calc(48px + (100vw - 1536px) / 45.9);
+   }
+   .albumPageTitleSec, .albumPageName-artist-wrapper {
+    width: calc(1000px + (100vw - 1536px) / 1.052);
+   }
+  }
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .albumPageWrapper {
+        width: calc(740px + (100vw - 800px) / 1.045);
+        padding-left: calc(30px + (100vw - 800px) / 45.9);
+        padding-right: calc(30px + (100vw - 800px) / 45.9);
+        margin-left: 0;
+        padding-bottom: 190px;
+    }
+    .albumPageNavWrapper {
+        width: calc(740px + (100vw - 800px) / 1.045);
+        padding-left: calc(30px + (100vw - 800px) / 45.9);
+        padding-right: calc(30px + (100vw - 800px) / 45.9);
+    }
+    .albumPageDetailsWrapper, .albumPageSongsOptionsWrapper {
+        width: calc(740px + (100vw - 800px) / 1.045);
+    }
+    .albumPageDetailsContent, .albumPageSongsOptionsContent {
+        width: calc(708px + (100vw - 800px) / 1.047);
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .albumPageDetailsImgWrapper {
+        width: calc(232px + (100vw - 800px) / 4);
+        height: calc(232px + (100vw - 800px) / 4);
+    }
+    .albumPageTitleTxt {
+        width: calc(445px + (100vw - 800px) / 1.4);
+        font-size: calc(64px + (100vw - 800px) / 12);
+    }
+    .albumPageUserInfoWrapper {
+        width: calc(445px + (100vw - 800px) / 1.4);
+    }
+    .albumPageInfoBar {
+        margin-left: calc(16px + (100vw - 800px) / 45.9);
+        margin-right: calc(16px + (100vw - 800px) / 45.9);
+    }
+    .albumPageScrolledInfoBar {
+        right: unset;
+        left: 0;
+        padding-left: calc(62px + (100vw - 800px) / 26);
+        padding-right: calc(62px + (100vw - 800px) / 25);
+    }
+    .albumPageTitleSec, .albumPageName-artist-wrapper {
+        width: calc(455px + (100vw - 800px) / 1.5);
+    }
+    .albumPageDurationImgWrapper, .albumPageEndOfTrackBoxWrapper {
+        width: calc(127px + (100vw - 800px) / 10);
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    .albumPageDetailsWrapper {
+        height: calc(340px + (100vw - 500px) / 1.8);
+    }
+    .albumPageDetailsContent {
+        height: calc(316px + (100vw - 500px) / 1.8);
+    }
+    .albumPageDetailsImgWrapper {
+        width: calc(157px + (100vw - 500px) / 3);
+        height: calc(157px + (100vw - 500px) / 3);
+        margin-right: calc(24px + (100vw - 500px) / 20);
+    }
+    .albumPageplayListTxt, .albumPageArtistName, .albumPageAlbumReleaseYear, .albumPageNumberOfTracks, .albumPageFullAlbumTimeLenght {
+        font-size: calc(14px + (100vw - 500px) / 39.2);
+    }
+    .albumPageTitleTxt {
+        width: calc(230px + (100vw - 500px) / 1.8);
+        font-size: calc(38px + (100vw - 500px) / 11);
+    }
+    .albumPageUserInfoWrapper {
+        width: calc(230px + (100vw - 500px) / 1.8);
+    }
+    .albumPageCircleElement {
+        font-size: calc(8px + (100vw - 500px) / 50);
+    }
+    .albumPageInfoBar {
+        margin-left: calc(10px + (100vw - 500px) / 22);
+        margin-right: calc(10px + (100vw - 500px) / 22);
+    }
+    .albumPageScrolledInfoBar {
+        padding-left: calc(50px + (100vw - 500px) / 14.352);
+        padding-right: calc(50px + (100vw - 500px) / 14.352);
+       }
+    .albumPageResultsWrapper {
+        padding-left: calc(10px + (100vw - 500px) / 15);
+        padding-right: calc(10px + (100vw - 500px) / 15);
+    }
+    .albumPageTitleSec, .albumPageName-artist-wrapper {
+        width: calc(250px + (100vw - 500px) / 1.149);
+    }
+    .albumPageDurationImgWrapper, .albumPageEndOfTrackBoxWrapper {
+        width: 100px
+    }
+  }

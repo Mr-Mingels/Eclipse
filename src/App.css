@@ -1,0 +1,33 @@
+.loadingScreen {
+    background-color: #0d0d0d;
+    height: 100vh;
+    width: 100%;
+    color: transparent;
+}
+
+body {
+    overflow-y: scroll;
+  }
+  
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .custom-scrollbar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 15px;
+    height: 665px;
+    background-color: transparent;
+    z-index: 9999;
+    margin: 3px 0
+  }
+  
+  .custom-scrollbar-thumb {
+    border: 6.4px solid rgba(106, 106, 106, 0.8);
+    height: 150px;
+    position: absolute;
+    right: 1px;
+  }
+  

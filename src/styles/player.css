@@ -1,0 +1,196 @@
+/* SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM */
+
+.spotifyPlayerWrapper {
+    position: fixed;
+    bottom: -1px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.rswp__active {
+    -webkit-user-select: none; /* Chrome, Safari, and Opera */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer and Edge */
+    user-select: none;
+    color: #7d4c89 !important;
+}
+
+/* SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM SPOTIFY PREMIUM */
+
+
+
+/* SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR */
+
+.spotifyErrorPlayerWrapper {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 90px;
+    background-color: #181818;
+    border-top: 1px solid #3a3a3a;
+    z-index: 1000;
+}
+
+.spotifyErrorPlayerContent {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.emptySpace {
+    height: 100%;
+    width: 412px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    color: rgb(210, 210, 210);
+}
+
+.playWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 601px;
+}   
+
+.playButtonsWrapper {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.previousBtnWrapper, .nextBtnWrapper, .muteBtnWrapper {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pauseBtnWrapper {
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0,0%,100%,.3);
+    border: 0px;
+    border-radius: 50%;
+}
+
+.playBackBarWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 17.6px;
+    gap: 12px;
+    width: 100%;
+}
+
+.playBackLineWrapper {
+    width: 505px;
+    display: flex;
+    align-items: center;
+    height: 12px;
+}
+
+.playBackLine, .volumeBar{
+    height: 4px;
+    width: 100%;
+    background-color: #5d5d5d;
+    border: 0px;
+    border-radius: 6px;
+}
+
+.playBackTimer {
+    font-size: 11px;
+    font-weight: 400;
+    color: #a7a7a7;
+}
+
+.soundWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 471px;
+}   
+
+.soundContent {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 32px;
+    width: 100%;
+}
+
+.volumeBarWrapper {
+    display: flex;
+    align-items: center;
+    height: 12px;
+    width: 93px;
+    margin-right: 4px;
+}
+
+.fillColor {
+    fill: #5d5d5d;
+}
+
+
+/* SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR SPOTIFY ERROR */
+
+
+@media screen and (max-width: 1536px) {
+    .playWrapper {
+        width: calc(601px + (100vw - 1536px) / 3);
+    }
+    .emptySpace {
+        font-size: calc(16px + (100vw - 1536px) / 150);
+    }
+  }
+
+
+
+
+@media screen and (max-width: 800px) {
+    .spotifyPlayerWrapper, .spotifyErrorPlayerWrapper {
+        bottom: 76px;
+        left: 0;
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .playWrapper {
+        width: calc(400px + (100vw - 800px) / 2.3);
+    }
+    .emptySpace {
+        width: calc(412px + (100vw - 800px) / 0.9);
+        font-size: calc(12px + (100vw - 800px) / 90);
+    }
+    .soundWrapper {
+        width: calc(471px + (100vw - 800px) / 0.8);
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .spotifyErrorPlayerWrapper {
+        width: calc(500px + (100vw - 500px) / 1);
+        display: flex;
+        justify-content: center;
+    }
+    .soundWrapper {
+        display: none;
+    }
+    .emptySpace {
+        display: none;
+    }
+  }
+
+  @media screen and (max-width: 349px) {
+    .spotifyPlayerWrapper, .spotifyErrorPlayerWrapper {
+        width: calc(349px + (100vw - 349px) / 1);
+    }
+  }

@@ -1,0 +1,112 @@
+
+
+.myLibraryNavBar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1224px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    padding: 10px 30px 10px 30px;
+    z-index: 10;
+}
+
+.myLibraryNavLinksWrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    gap: 8px;
+}
+
+.myLibraryNavLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25.6px;
+    width: 60px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    padding: 8px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.myLibraryNavLink.onRoute {
+    background-color: #3f3f3f;
+    border: 0px;
+    border-radius: 4px;
+}
+
+.myLibraryLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.myLibrarySignUpBtn {
+    padding: 10px 20px 10px 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.myLibraryLogInBtn {
+    padding: 10px 20px 10px 20px;
+    margin-left: 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .myLibraryNavBar {
+        width: calc(1224px + (100vw - 1536px) / 1);
+    }
+  }
+
+@media (max-width: 1536px) {
+    .myLibraryNavBar {
+        width: calc(1220px + (100vw - 1536px) / 1);
+    }
+  }
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .myLibraryNavBar {
+        width: calc(741px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        right: unset;
+        left: 0;
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    .myLibraryAuthDetailsWrapper {
+        display: none;
+    }
+    .myLibraryNavLink {
+        padding-left: calc(16px + (100vw - 500px) / 25);
+        padding-right: calc(16px + (100vw - 500px) / 25);
+        height: calc(25.6px + (100vw - 500px) / 25);
+    }
+  }

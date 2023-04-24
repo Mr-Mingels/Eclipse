@@ -1,0 +1,180 @@
+.sideBarWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 208px;
+    background-color: black;
+    padding: 24px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    z-index: 100;
+}
+
+.sideBarContent {
+    height: 100%;
+    width: 100%;
+}
+
+.sideBarListWrapper {
+    height: fit-content;
+}
+
+.sideBarList {
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.linkWrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    color: rgb(200, 200, 200);
+    text-decoration: none;
+}
+
+.createPlayListBtn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    gap: 16px;
+    border: none;
+    font-size: 16px;
+    width: 100%;
+    color: rgb(200, 200, 200);
+    cursor: pointer;
+}
+
+.linkWrapper:hover, .createPlayListBtn:hover {
+    color: white;
+}
+
+.sideBarItem {
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#createPlaylist {
+    margin-top: 70px;
+}
+
+.imgIcons {
+    width: 30px;
+    height: 30px;
+    pointer-events: none;
+}
+
+.playListsWrapper {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.playListsTitle {
+    color: white;
+    margin-top: 50px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    font-weight: 100;
+    padding: 10px 0 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.sideBarPlayListsResultsWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.sideBarRenderedPlayListNameWrapper {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    margin-top: 18px;
+    --toggle-color: rgb(200, 200, 200);
+}
+
+.sideBarRenderedPlayListName {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.loadingScreenSideBar {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+    transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) {
+    .sideBarWrapper {
+        bottom: -1px;
+        top: unset;
+        height: 30px;
+        width: calc(740px + (100vw - 800px) / 1.05);
+        z-index: 9999;
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+    }
+    .sideBarList {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .sideBarItem {
+        margin: 0;
+    }
+    #createPlaylist {
+        margin: 0;
+    }
+    .linkWrapperTxt {
+        display: none;
+    }
+    .playListsWrapper {
+        display: none;
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 349px) {
+    .sideBarWrapper {
+        width: calc(311px + (100vw - 349px) / 1.05);
+        padding-left: calc(19px + (100vw - 349px) / 41);
+        padding-right: calc(19px + (100vw - 349px) / 41);
+    }
+  }

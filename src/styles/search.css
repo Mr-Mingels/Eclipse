@@ -1,0 +1,436 @@
+.searchNavWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1220px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 44px;
+    background: linear-gradient(to right, #000000, #231b25);
+    padding: 10px 30px 10px 30px;
+    z-index: 1000;
+}
+
+.searchInputWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.searchBarIconImg {
+    width: 22.5px;
+    height: 22.5px;
+    position: absolute;
+    left: 43px;
+    pointer-events: none;
+}
+
+.searchInput {
+    outline: none;
+    border: 0px;
+    font-size: 0.875rem;
+    padding: 6px 48px;
+    font-weight: 400;
+    width: 268px;
+    height: 28px;
+    border-radius: 500px;
+}
+
+.searchLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.searchSignUpBtn {
+    padding: 10px 20px 10px 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.searchLogInBtn {
+    padding: 10px 20px 10px 20px;
+    margin-left: 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.loadingScreenSearch {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.selectorHeaderWrapper{
+    height: 47.6px;
+    width: 1216px;
+    padding: 0 32px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    background-color: #0d0d0d;
+    gap: 16px;
+    top: 63px;
+    right: 0;
+    z-index: 2;
+}
+
+.selectBtn {
+    padding: 4px 12px;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    background-color: #252525;
+    color: white;
+    border: 0px;
+    line-height: 10px;
+    border-radius: 32px;
+}
+
+.selectBtnLinkWrapper {
+    text-decoration: none;
+}
+
+.selectBtn.onRoute {
+    background-color: white;
+    color: black;
+}
+
+/* GENRE GENRE GENRE GENRE GENRE GENRE GENRE GENRE GENRE GENRE GENRE GENRE GENRE*/
+
+.genreListWrapper {
+    min-height: 100vh;
+    margin-left: auto;
+    width: 1216px;
+    padding: 120px 32px 0 32px;
+}
+
+.browseAllTitle {
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.genreBoxWrapper {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.genreBoxLinkWrapper {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.genreBoxLinkWrapper.disabled {
+    pointer-events: none;
+}
+
+.genreBox {
+    width: 182.5px;
+    height: 182.5px;
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.genreTitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    padding: 16px;
+    position: absolute;
+}
+
+.genreImg {
+    bottom: 0;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    height: 100px;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    -webkit-transform: rotate(25deg) translate(18%,-2%);
+    transform: rotate(25deg) translate(18%,-2%);
+    object-fit: cover;
+}
+
+#Pop {
+    background-color: #FF69B4;
+}
+
+#Hip-Hop {
+    background-color: #FFD700;
+}
+
+#Rock {
+    background-color: #333333;
+}
+
+#Jazz {
+    background-color: #1E90FF;
+}
+
+#Classical {
+    background-color: #9f9f73;
+}
+
+#Metal {
+    background-color: #8B0000;
+}
+
+#Country {
+    background-color: #D2B48C;
+}
+
+#Indie {
+    background-color: #9ACD32;
+}
+
+#rb {
+    background-color: #4B0082;
+}
+
+#Blues {
+    background-color:  #00008B;
+}
+
+#Soul {
+    background-color: #800020;
+}
+
+#K-pop {
+    background-color: #FF69B4;
+}
+
+#Punk {
+    background-color: #008000;
+}
+
+#Latin {
+    background-color: #FF0000;
+}
+
+#Folk { 
+    background-color: #8FBC8F;
+}   
+
+#Gospel {
+    background-color: #87CEEB;
+}
+
+#Electronic {
+    background-color: #00BFFF ;
+}
+
+#Reggae {
+    background-color:  #00ca00;
+}
+
+.searchLoadingScreen {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    z-index: 100;
+    width: 1280px;
+    color: transparent;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+    transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+}
+
+
+
+
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .genreListWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045); 
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+    }
+    .searchNavWrapper {
+        width: calc(1220px + (100vw - 1536px) / 1);
+    }
+    .selectorHeaderWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1);
+    }
+    .genreBoxWrapper {
+        gap: calc(24px + (100vw - 1536px) / 130);
+    }
+    .searchLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+
+@media (max-width: 1536px) {
+    .genreListWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045); 
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+    }
+    .searchNavWrapper {
+        width: calc(1220px + (100vw - 1536px) / 1.015);
+    }
+    .selectorHeaderWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.015);
+    }
+    .genreBoxWrapper {
+        gap: calc(24px + (100vw - 1536px) / 130);
+    }
+    .searchLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+  @media screen and (min-width: 1520.1px) and (max-width: 1536px) {
+    .genreBox {
+        width: calc(182.5px + (100vw - 1536px) / 4.22);
+        height: calc(182.5px + (100vw - 1536px) / 4.22);
+    }
+    
+  }
+
+  @media screen and (min-width: 1316.1px) and (max-width: 1520px) {
+    .genreListWrapper {
+        padding-bottom: 110px;
+    }
+    .genreBox {
+        width: calc(220.6px + (100vw - 1520px) / 5.46);
+        height: calc(220.6px + (100vw - 1520px) / 5.46);
+    }
+  }
+
+  @media screen and (min-width: 988.1px) and (max-width: 1316px) {
+    .genreListWrapper {
+        padding-bottom: 110px;
+    }
+    .genreBox {
+        width: calc(234.5px + (100vw - 1316px) / 4.29);
+        height: calc(234.5px + (100vw - 1316px) / 4.29);
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 988px) {
+    .searchInput {
+        width: calc(268px + (100vw - 988px) / 2);
+    }
+    .genreListWrapper {
+        padding-bottom: 110px;
+    }
+    .genreBox {
+        width: calc(216px + (100vw - 988px) / 3.26);
+        height: calc(216px + (100vw - 988px) / 3.26);
+    }
+  }
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .genreListWrapper {
+        width: calc(740px + (100vw - 800px) / 1.045); 
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        padding-bottom: 240px;
+        margin: 0;
+    }
+    .searchNavWrapper {
+        width: calc(741px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        right: unset;
+        left: 0;
+    }
+    .searchInput {
+        width: calc(268px + (100vw - 800px) / 3);
+    }
+    .selectorHeaderWrapper {
+        width: calc(741px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        right: unset;
+        left: 0;
+    }
+    .searchLoadingScreen {
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .genreTitle {
+        font-size: calc(24px + (100vw - 800px) / 100);
+    }
+    .genreBox {
+        width: calc(234.4px + (100vw - 800px) / 3.18);
+        height: calc(234.4px + (100vw - 800px) / 3.18);
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    .genreTitle {
+        font-size: calc(1.5rem + (100vw - 500px) / 40);
+        padding: calc(16px + (100vw - 500px) / 35);
+    }
+    .genreBox {
+        width: calc(218.4px + (100vw - 500px) / 2.1);
+        height: calc(218.4px + (100vw - 500px) / 2.1);
+    }
+    .selectorHeaderWrapper {
+        width: calc(455.275px + (100vw - 500px) / 1.05);
+        padding-left: calc(22.683px + (100vw - 500px) / 41);
+        padding-right: calc(22.683px + (100vw - 500px) / 41);
+        gap:  calc(16px + (100vw - 500px) / 41);
+    }
+    .selectBtn {
+        font-size: calc(14px + (100vw - 500px) / 60);
+        height: calc(32px + (100vw - 500px) / 25);
+        padding-left: calc(12px + (100vw - 500px) / 100);
+        padding-right: calc(12px + (100vw - 500px) / 100);
+    }
+    .searchAuthDetailsWrapper {
+        display: none;
+    }
+    .searchInput {
+        width: calc(300px + (100vw - 500px) / 1.4);
+    }
+  }
+
+

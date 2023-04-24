@@ -1,0 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  background-color: #0d0d0d;
+}

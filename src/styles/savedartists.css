@@ -1,0 +1,278 @@
+.savedArtistsWrapper {
+    min-height: 100vh;
+    margin-left: auto;
+    width: 1216px;
+    background-color: #0d0d0d;
+    padding: 100px 32px 100px 32px;
+}
+
+.savedArtistsArtistsTitle {
+    color: white;
+    font-size: 24px;
+    height: 39px;
+    margin-bottom: 15px;
+}
+
+.savedArtistsResults {
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-gap: 24.8px; /* Safari */
+    gap: 24.8px;
+}
+
+.savedArtistsNoResultsFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 44px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    z-index: 200;
+    color: white;
+    width: 1280px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;   
+    -webkit-transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+    transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+}
+
+.linkSavedArtistBoxWrapper {
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    -webkit-tap-highlight-color: transparent; /* Remove highlight on mobile devices */
+}
+
+.savedArtistBox {
+    padding: 16px;
+    background: #181818;
+    border: 0px;
+    border-radius: 6px;
+    width: 150px;
+    height: 228px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.savedArtistBox:hover {
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.savedArtistImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #0d0d0d;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 16px;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.savedArtistName {
+    color: white;
+    width: 150px;
+    height: 25.6px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.savedArtistCategoryType {
+    color: #989898;
+    font-size: 14px;
+    height: 22px;
+    font-weight: 400;
+    width: 150px;
+}
+
+.savedArtistLoadingScreen {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+    transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+}
+
+
+
+
+  @media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .savedArtistsWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.051);
+        padding-left: calc(32px + (100vw - 1536px) / 41);
+        padding-right: calc(32px + (100vw - 1536px) / 41);
+    }
+    .savedArtistsResults {
+        gap: calc(24.8px + (100vw - 1536px) / 208.3); 
+    }
+    .savedArtistLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+  @media (max-width: 1536px) {
+    .savedArtistsWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.051);
+        padding-left: calc(32px + (100vw - 1536px) / 41);
+        padding-right: calc(32px + (100vw - 1536px) / 41);
+    }
+    .savedArtistsResults {
+        gap: calc(24.8px + (100vw - 1536px) / 208.3); 
+    }
+    .savedArtistLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+  @media screen and (min-width: 1520.1px) and (max-width: 1536px) {
+    .linkSavedArtistBoxWrapper {
+        width: calc(182px + (100vw - 1536px) / 6.5);
+        height: calc(260px + (100vw - 1536px) / 6.5);
+    }
+    .savedArtistBox {
+        width: calc(150px + (100vw - 1536px) / 6.5);
+        height: calc(228px + (100vw - 1536px) / 6.5);
+    }
+    .savedArtistImg {
+        width: calc(150px + (100vw - 1536px) / 6.5);
+        height: calc(150px + (100vw - 1536px) / 6.5);
+    }
+    .savedArtistName {
+        width: calc(150px + (100vw - 1536px) / 6.5);
+    }
+  }
+
+  @media screen and (min-width: 1316.1px) and (max-width: 1520px) {
+    .linkSavedArtistBoxWrapper {
+        width: calc(220.38px + (100vw - 1520px) / 5.36);
+        height: calc(298.6px + (100vw - 1520px) / 5.36);
+    }
+    .savedArtistBox {
+        width: calc(188.38px + (100vw - 1520px) / 5.36);
+        height: calc(266.6px + (100vw - 1520px) / 5.36);
+    }
+    .savedArtistImg {
+        width: calc(188.38px + (100vw - 1520px) / 5.36);
+        height: calc(188.38px + (100vw - 1520px) / 5.36);
+    }
+    .savedArtistName {
+        width: calc(188.38px + (100vw - 1520px) / 5.36);
+    }
+  }
+
+  @media screen and (min-width: 988.1px) and (max-width: 1316px) {
+    .linkSavedArtistBoxWrapper {
+        width: calc(233.87px + (100vw - 1316px) / 4.26);
+        height: calc(308.750px + (100vw - 1316px) / 4.26);
+    }
+    .savedArtistBox {
+        width: calc(201.87px + (100vw - 1316px) / 4.26);
+        height: calc(276.75px + (100vw - 1316px) / 4.26);
+    }
+    .savedArtistImg {
+        width: calc(201.87px + (100vw - 1316px) / 4.26);
+        height: calc(201.87px + (100vw - 1316px) / 4.26);
+    }
+    .savedArtistName {
+        width: calc(201.87px + (100vw - 1316px) / 4.26);
+    }
+  }
+
+  @media screen and (min-width: 800.1px) and (max-width: 988px) {
+    .linkSavedArtistBoxWrapper {
+        width: calc(216.7px + (100vw - 988px) / 3.18);
+        height: calc(299px + (100vw - 988px) / 3.18);
+    }
+    .savedArtistBox {
+        width: calc(184.7px + (100vw - 988px) / 3.18);
+        height: calc(267px + (100vw - 988px) / 3.18);
+    }
+    .savedArtistImg {
+        width: calc(184.7px + (100vw - 988px) / 3.18);
+        height: calc(184.7px + (100vw - 988px) / 3.18);
+    }
+    .savedArtistName {
+        width: calc(184.7px + (100vw - 988px) / 3.18);
+    }
+  }
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .savedArtistsWrapper {
+        width: calc(740px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        margin: 0;
+        padding-bottom: 240px;
+    }
+    .savedArtistsResults {
+        gap: calc(24.8px + (100vw - 800px) / 208.3);  
+    }
+    .savedArtistLoadingScreen {
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .savedArtistBox {
+        width: calc(198px + (100vw - 800px) / 3.18);
+        height: calc(276px + (100vw - 800px) / 3.18);
+    }
+    .savedArtistImg {
+        width: calc(198px + (100vw - 800px) / 3.18);
+        height: calc(198px + (100vw - 800px) / 3.18);
+    }
+    .savedArtistName {
+        width: calc(198px + (100vw - 800px) / 3.18);    
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    .savedArtistsResults {
+        gap: calc(16px + (100vw - 500px) / 125);  
+    }
+    .savedArtistBox {
+        width: calc(187px + (100vw - 500px) / 2.12);
+        height: calc(265px + (100vw - 500px) / 2.12);
+    }
+    .savedArtistImg {
+        width: calc(187px + (100vw - 500px) / 2.12);
+        height: calc(187px + (100vw - 500px) / 2.12);
+    }
+    .savedArtistName {
+        width: calc(187px + (100vw - 500px) / 2.12);    
+    }
+  }

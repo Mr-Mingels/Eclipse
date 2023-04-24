@@ -1,0 +1,86 @@
+.displayNameWrapper {
+    padding: 8px 20px 8px 20px;
+    color: white;
+    background-color: black;
+    border: 0px;
+    border-radius: 30px;    
+    cursor: pointer;
+}
+
+.menuWrapper {
+    position: absolute;
+    right: 30px;
+    top: 60px;
+    width: 188px;
+    height: 42px;
+    background-color: #282828;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.userSignOutBtn {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.userSignOutBtn:hover {
+    background-color: #484848;
+}
+
+.displayName {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    gap: 5px;
+}
+
+.sortUpImg {
+    width: 19.200px;
+    height: 19.200px;
+    transform: rotate(180deg);
+}
+
+.sortUpImg.menuOpen {
+    transform: rotate(0deg);
+}
+
+.authenticationLoadingScreen {
+    position: fixed;
+    top: 0px;
+    right: 0;
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    z-index: 100;
+    width: 1280px;
+    color: transparent;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}

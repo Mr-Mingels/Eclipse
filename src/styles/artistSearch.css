@@ -1,0 +1,263 @@
+.artistsSearchWrapper {
+    min-height: 100vh;
+    margin-left: auto;
+    width: 1216px;
+    background-color: #0d0d0d;
+    padding: 140px 32px 100px 32px;
+}
+
+.artistsResults {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24.8px;
+}
+
+.linkArtistBoxWrapper {
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.artistBox {
+    padding: 16px;
+    background: #181818;
+    border: 0px;
+    border-radius: 6px;
+    width: 150px;
+    height: 228px;
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.artistBox:hover {
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.artistImg {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #0d0d0d;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 16px;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+  
+  
+
+.artistName {
+    color: white;
+    width: 150px;
+    height: 25.6px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.categoryType {
+    color: #989898;
+    font-size: 14px;
+    height: 22px;
+    font-weight: 400;
+    width: 150px;
+}
+
+.artistLoadingScreen {
+    position: fixed;
+    top: 112px;
+    right: 0;
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    z-index: 100;
+    width: 1280px;
+    color: transparent;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.artistsNoResultsFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 44px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    z-index: 200;
+    color: white;
+    width: 1280px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;   
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .artistsSearchWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+    .artistsNoResultsFound {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+    .artistLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+@media (max-width: 1536px) {
+    .artistsSearchWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+    .artistsNoResultsFound {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+    .artistLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+    .artistsResults {
+        gap: calc(24.8px + (100vw - 1536px) / 60);
+    }
+  }
+
+  @media screen and (min-width: 1520.1px) and (max-width: 1536px) {
+    .artistBox {
+        width: calc(150px + (100vw - 1536px) / 6.84);
+        height: calc(228px + (100vw - 1536px) / 6.84);
+    }
+    .artistImg {
+        width: calc(150px + (100vw - 1536px) / 6.84);
+        height: calc(150px + (100vw - 1536px) / 6.84);
+    }
+    .artistName {
+        width: calc(150px + (100vw - 1536px) / 6.84);
+    }
+  }
+
+  @media screen and (min-width: 1316.1px) and (max-width: 1520px) {
+    .artistBox {
+        width: calc(147.6px + (100vw - 1520px) / 6.84);
+        height: calc(225.6px + (100vw - 1520px) / 6.84);
+    }
+    .artistImg {
+        width: calc(147.6px + (100vw - 1520px) / 6.84);
+        height: calc(147.6px + (100vw - 1520px) / 6.84);
+    }
+    .artistName {
+        width: calc(147.6px + (100vw - 1520px) / 6.84);
+    }
+  }
+
+  @media screen and (min-width: 988.1px) and (max-width: 1316px) {
+    .artistBox {
+        width: calc(150px + (100vw - 1316px) / 5.784);
+        height: calc(228px + (100vw - 1316px) / 5.784);
+    }
+    .artistImg {
+        width: calc(150px + (100vw - 1316px) / 5.784);
+        height: calc(150px + (100vw - 1316px) / 5.784);
+    }
+    .artistName {
+        width: calc(150px + (100vw - 1316px) / 5.784);
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 988px) {
+    .artistBox {
+        width: calc(187.2px + (100vw - 988px) / 3.234);
+        height: calc(265.2px + (100vw - 988px) / 3.234);
+    }
+    .artistImg {
+        width: calc(187.2px + (100vw - 988px) / 3.234);
+        height: calc(187.2px + (100vw - 988px) / 3.234);
+    }
+    .artistName {
+        width: calc(187.2px + (100vw - 988px) / 3.234);
+    }
+  }
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .artistsSearchWrapper {
+        width: calc(740px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        margin: 0;
+        padding-bottom: 240px;
+    }
+    .artistsNoResultsFound {
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .artistLoadingScreen {
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .artistBox {
+        width: calc(143.6px + (100vw - 800px) / 4.43);
+        height: calc(221.6px + (100vw - 800px) / 4.43);
+    }
+    .artistImg {
+        width: calc(143.6px + (100vw - 800px) / 4.43);
+        height: calc(143.6px + (100vw - 800px) / 4.43);
+    }
+    .artistName {
+        width: calc(143.6px + (100vw - 800px) / 4.43);
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    .artistsResults {
+        gap: calc(24.8px + (100vw - 500px) / 15);
+    }
+    .artistsNoResultsFound {
+        width: calc(500px + (100vw - 500px) / 1);
+        font-size: calc(44px + (100vw - 500px) / 10);
+    }
+    .artistBox {
+        width: calc(182px + (100vw - 500px) / 2.27);
+        height: calc(260px + (100vw - 500px) / 2.27);
+    }
+    .artistImg {
+        width: calc(182px + (100vw - 500px) / 2.27);
+        height: calc(182px + (100vw - 500px) / 2.27);
+    }
+    .artistName {
+        width: calc(182px + (100vw - 500px) / 2.27);
+        font-size: calc(24px + (100vw - 500px) / 52.457);
+        height: calc(35px + (100vw - 500px) / 30);
+    }
+  }

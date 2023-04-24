@@ -1,0 +1,275 @@
+.albumsSearchWrapper {
+    min-height: 100vh;
+    margin-left: auto;
+    width: 1216px;
+    background-color: #0d0d0d;
+    padding: 140px 32px 100px 32px;
+}
+
+.albumResults {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24.8px;
+}
+
+.albumNoResultsFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 44px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    min-height: 100vh;
+    z-index: 200;
+    color: white;
+    width: 1280px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.linkAlbumBoxWrapper {
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+}
+
+.albumBox {
+    padding: 16px;
+    background: #181818;
+    border: 0px;
+    border-radius: 6px;
+    width: 150px;
+    height: 228px;
+    cursor: pointer;
+}
+
+.albumBox:hover {
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.albumCoverImg {
+    width: 150px;
+    height: 150px;
+    border: 0px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    background-color: #0d0d0d;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+.albumName {
+    color: white;
+    width: 150px;
+    height: 25.6px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.albumDataAndArtistName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #989898;
+    font-size: 14px;
+    height: 22px;
+    font-weight: 400;
+    width: 150px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.albumsLoadingScreen {
+    position: fixed;
+    top: 112px;
+    right: 0;
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    z-index: 100;
+    width: 1280px;
+    color: transparent;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .albumsSearchWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+    .albumNoResultsFound {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+    .albumsLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+@media (max-width: 1536px) {
+    .albumsSearchWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+    .albumNoResultsFound {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+    .albumsLoadingScreen {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+    .albumResults {
+        gap: calc(24.8px + (100vw - 1536px) / 60);
+    }
+  }
+
+  @media screen and (min-width: 1520.1px) and (max-width: 1536px) {
+    .albumBox {
+        width: calc(150px + (100vw - 1536px) / 6.84);
+        height: calc(228px + (100vw - 1536px) / 6.84);
+    }
+    .albumCoverImg {
+        width: calc(150px + (100vw - 1536px) / 6.84);
+        height: calc(150px + (100vw - 1536px) / 6.84);
+    }
+    .albumName {
+        width: calc(150px + (100vw - 1536px) / 6.84);
+    }
+    .albumDataAndArtistName {
+        width: calc(150px + (100vw - 1536px) / 6.84);
+    }
+  }
+
+  @media screen and (min-width: 1316.1px) and (max-width: 1520px) {
+    .albumBox {
+        width: calc(147.6px + (100vw - 1520px) / 6.84);
+        height: calc(225.6px + (100vw - 1520px) / 6.84);
+    }
+    .albumCoverImg {
+        width: calc(147.6px + (100vw - 1520px) / 6.84);
+        height: calc(147.6px + (100vw - 1520px) / 6.84);
+    }
+    .albumName {
+        width: calc(147.6px + (100vw - 1520px) / 6.84);
+    }
+    .albumDataAndArtistName {
+        width: calc(147.6px + (100vw - 1520px) / 6.84);
+    }
+  }
+
+  @media screen and (min-width: 988.1px) and (max-width: 1316px) {
+    .albumBox {
+        width: calc(150px + (100vw - 1316px) / 5.784);
+        height: calc(228px + (100vw - 1316px) / 5.784);
+    }
+    .albumCoverImg {
+        width: calc(150px + (100vw - 1316px) / 5.784);
+        height: calc(150px + (100vw - 1316px) / 5.784);
+    }
+    .albumName {
+        width: calc(150px + (100vw - 1316px) / 5.784);
+    }
+    .albumDataAndArtistName {
+        width: calc(150px + (100vw - 1316px) / 5.784);
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 988px) {
+    .albumBox {
+        width: calc(187.2px + (100vw - 988px) / 3.234);
+        height: calc(265.2px + (100vw - 988px) / 3.234);
+    }
+    .albumCoverImg {
+        width: calc(187.2px + (100vw - 988px) / 3.234);
+        height: calc(187.2px + (100vw - 988px) / 3.234);
+    }
+    .albumName {
+        width: calc(187.2px + (100vw - 988px) / 3.234);
+    }
+    .albumDataAndArtistName {
+        width: calc(187.2px + (100vw - 988px) / 3.234);
+    }
+  }
+
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .albumsSearchWrapper {
+        width: calc(740px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        margin: 0;
+        padding-bottom: 240px;
+    }
+    .albumNoResultsFound {
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .albumsLoadingScreen {
+        width: calc(800px + (100vw - 800px) / 1);
+    }
+    .albumBox {
+        width: calc(143.6px + (100vw - 800px) / 4.43);
+        height: calc(221.6px + (100vw - 800px) / 4.43);
+    }
+    .albumCoverImg {
+        width: calc(143.6px + (100vw - 800px) / 4.43);
+        height: calc(143.6px + (100vw - 800px) / 4.43);
+    }
+    .albumName {
+        width: calc(143.6px + (100vw - 800px) / 4.43);
+    }
+    .albumDataAndArtistName {
+        width: calc(143.6px + (100vw - 800px) / 4.43);
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    .albumResults {
+        gap: calc(24.8px + (100vw - 500px) / 15);
+    }
+    .albumNoResultsFound {
+        width: calc(500px + (100vw - 500px) / 1);
+        font-size: calc(44px + (100vw - 500px) / 10);
+    }
+    .albumBox {
+        width: calc(182px + (100vw - 500px) / 2.27);
+        height: calc(260px + (100vw - 500px) / 2.27);
+    }
+    .albumCoverImg {
+        width: calc(182px + (100vw - 500px) / 2.27);
+        height: calc(182px + (100vw - 500px) / 2.27);
+    }
+    .albumName {
+        width: calc(182px + (100vw - 500px) / 2.27);
+    }
+    .albumDataAndArtistName {
+        width: calc(182px + (100vw - 500px) / 2.27);
+    }
+  }

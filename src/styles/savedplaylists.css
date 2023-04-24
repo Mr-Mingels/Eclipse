@@ -1,0 +1,331 @@
+.savedPlayListsWrapper {
+    min-height: 100vh;
+    margin-left: auto;
+    width: 1216px;
+    background-color: #0d0d0d;
+    padding: 100px 32px 100px 32px;
+}
+
+.savedPlayListsContent {
+    height: fit-content;  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24.7px;
+}
+
+.savedPlayListsPlayListsTitle {
+    color: white;
+    font-size: 24px;
+    height: 39px;
+    margin-bottom: 15px;
+}
+
+.savedPlayListsLikedSongsLink {
+    text-decoration: none;
+    height: 273px;
+    width: 389px;
+}
+
+.savedPlayListsLikedSongsBox {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to top, #000000, #231b25);
+    padding: 20px;
+    height: 233px;
+    width: 349px;
+    border: 0px;
+    border-radius: 6px;
+    color: white;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.savedPlayListsLikedSongsTitle {
+    font-size: 32px;
+    height: 60px;
+    font-weight: 700;
+}
+
+.savedPlayListsNumberOfTracksLiked {
+    height: 25px;
+}
+
+.linkSavedPlayListBoxWrapper {
+    text-decoration: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    -webkit-tap-highlight-color: transparent; /* Remove highlight on mobile devices */
+}
+
+.savedPlayListBox {
+    padding: 16px;
+    background: #181818;
+    border: 0px;
+    border-radius: 6px;
+    width: 150px;
+    height: 241px;
+    cursor: pointer;
+}
+
+.savedPlayListBox:hover {
+    background-color: rgba(67, 67, 67, 0.5);
+}
+
+.savedPlayListCoverImg {
+    width: 150px;
+    height: 150px;
+    border: 0px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    background-color: #0d0d0d;
+    box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+.savedPlayListName {
+    color: white;
+    width: 150px;
+    height: 25.6px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    font-weight: 700;
+    padding-bottom: 4px;
+}
+
+.savedPlayListDataAndArtistName {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #989898;
+    font-size: 14px;
+    height: 22px;
+    font-weight: 400;
+    width: 150px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+.loadingSavedPlayLists {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    right: 0;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+    transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .savedPlayListsWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.051);
+        padding-left: calc(32px + (100vw - 1536px) / 41);
+        padding-right: calc(32px + (100vw - 1536px) / 41);
+    }
+    .savedPlayListsContent {
+        gap: calc(24.7px + (100vw - 1536px) / 208.3);
+        
+    }
+    .loadingSavedPlayLists {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+@media (max-width: 1536px) {
+    .savedPlayListsWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.051);
+        padding-left: calc(32px + (100vw - 1536px) / 41);
+        padding-right: calc(32px + (100vw - 1536px) / 41);
+    }
+    .savedPlayListsContent {
+        gap: calc(24.7px + (100vw - 1536px) / 208.3);  
+    }
+    .loadingSavedPlayLists {
+        width: calc(1280px + (100vw - 1536px) / 1);
+    }
+  }
+
+  
+  @media screen and (min-width: 1520.1px) and (max-width: 1536px) {
+    .savedPlayListsLikedSongsLink {
+        width: calc(389px + (100vw - 1536px) / 3.13);
+        height: calc(273px + (100vw - 1536px) / 5);
+    }
+    .savedPlayListsLikedSongsBox {
+        width: calc(349px + (100vw - 1536px) / 2.66);
+        height: calc(233px + (100vw - 1536px) / 5);
+    }
+    .savedPlayListBox {
+        width: calc(150px + (100vw - 1536px) / 6.73);
+        height: calc(241px + (100vw - 1536px) / 5);
+    }
+    .savedPlayListCoverImg {
+        width: calc(150px + (100vw - 1536px) / 5.37);
+        height: calc(150px + (100vw - 1536px) / 5.37);
+    }
+    .savedPlayListName, .savedPlayListDataAndArtistName {
+        width: calc(150px + (100vw - 1536px) / 5.37);
+    }
+  }
+
+  @media screen and (min-width: 1316.1px) and (max-width: 1520px) {
+    .savedPlayListsLikedSongsLink {
+        width: calc(465.2px + (100vw - 1520px) / 2.66);
+        height: calc(311px + (100vw - 1520px) / 5);
+    }
+    .savedPlayListsLikedSongsBox {
+        width: calc(425.2px + (100vw - 1520px) / 2.66);
+        height: calc(271px + (100vw - 1520px) / 5);
+    }
+    .savedPlayListBox {
+        width: calc(188.4px + (100vw - 1520px) / 5.37);
+        height: calc(279px + (100vw - 1520px) / 5);
+    }
+    .savedPlayListCoverImg {
+        width: calc(188.4px + (100vw - 1520px) / 5.37);
+        height: calc(188.4px + (100vw - 1520px) / 5.37);
+    }
+    .savedPlayListName, .savedPlayListDataAndArtistName {
+        width: calc(188.4px + (100vw - 1520px) / 5.37);
+    }
+  }
+
+  @media screen and (min-width: 988.1px) and (max-width: 1316px) {
+    .savedPlayListsLikedSongsLink {
+        width: calc(491.9px + (100vw - 1316px) / 2.11);
+        height: calc(321.150px + (100vw - 1316px) / 4.435);
+    }
+    .savedPlayListsLikedSongsBox {
+        width: calc(451.9px + (100vw - 1316px) / 2.11);
+        height: calc(281.150px + (100vw - 1316px) / 4.435);
+    }
+    .savedPlayListBox {
+        width: calc(201.760px + (100vw - 1316px) / 4.261);
+        height: calc(289.150px + (100vw - 1316px) / 4.435);
+    }
+    .savedPlayListCoverImg {
+        width: calc(198.750px + (100vw - 1316px) / 4.261);
+        height: calc(198.750px + (100vw - 1316px) / 4.261);
+    }
+    .savedPlayListName, .savedPlayListDataAndArtistName {
+        width: calc(198.750px + (100vw - 1316px) / 4.261);
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 988px) {
+    .savedPlayListsLikedSongsLink {
+        width: calc(455.7px + (100vw - 988px) / 1.582);
+        height: calc(311.4px + (100vw - 988px) / 3);
+    }
+    .savedPlayListsLikedSongsBox {
+        width: calc(415.7px + (100vw - 988px) / 1.582);
+        height: calc(271.4px + (100vw - 988px) / 3);
+    }
+    .savedPlayListBox {
+        width: calc(184.8px + (100vw - 988px) / 3.18);
+        height: calc(279.4px + (100vw - 988px) / 3);
+    }
+    .savedPlayListCoverImg {
+        width: calc(184.8px + (100vw - 988px) / 3.18);
+        height: calc(184.8px + (100vw - 988px) / 3);
+    }
+    .savedPlayListName, .savedPlayListDataAndArtistName {
+        width: calc(184.8px + (100vw - 988px) / 3.18);
+    }
+  }
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .savedPlayListsWrapper {
+        width: calc(740px + (100vw - 800px) / 1.05);
+        padding-left: calc(30px + (100vw - 800px) / 41);
+        padding-right: calc(30px + (100vw - 800px) / 41);
+        margin: 0;
+        padding-bottom: 240px;
+    }
+    .savedPlayListsContent {
+        gap: calc(24.7px + (100vw - 800px) / 208.3);  
+    }
+    .loadingSavedPlayLists {
+        width: calc(800px + (100vw - 800px) / 1);
+    }.savedPlayListsLikedSongsLink {
+        width: calc(485px + (100vw - 800px) / 1.582);
+        height: calc(325px + (100vw - 800px) / 3);
+    }
+    .savedPlayListsLikedSongsBox {
+        width: calc(445px + (100vw - 800px) / 1.582);
+        height: calc(285px + (100vw - 800px) / 3);
+    }
+    .savedPlayListBox {
+        width: calc(198px + (100vw - 800px) / 3.18);
+        height: calc(293px + (100vw - 800px) / 3);
+    }
+    .savedPlayListCoverImg {
+        width: calc(198px + (100vw - 800px) / 3.18);
+        height: calc(198px + (100vw - 800px) / 3);
+    }
+    .savedPlayListName, .savedPlayListDataAndArtistName {
+        width: calc(198px + (100vw - 800px) / 3.18);
+    }
+  }
+
+
+
+
+
+  @media screen and (max-width: 500px) {
+    .savedPlayListsLikedSongsLink {
+        width: calc(454.275px + (100vw - 500px) / 1.05);
+        height: calc(325px + (100vw - 500px) / 2.1);
+    }
+    .savedPlayListsLikedSongsBox {
+        width: calc(414.275px + (100vw - 500px) / 1.05);
+        height: calc(285px + (100vw - 500px) / 2.1);
+    }
+    .savedPlayListsLikedSongsTitle {
+        font-size: calc(32px + (100vw - 500px) / 35);
+        height: calc(60px + (100vw - 500px) / 15);
+    }
+    .savedPlayListsNumberOfTracksLiked {
+        font-size: calc(16px + (100vw - 500px) / 100);
+    }
+    .savedPlayListBox {
+        width: calc(183px + (100vw - 500px) / 2.12);
+        height: calc(273px + (100vw - 500px) / 2.12);
+    }
+    .savedPlayListCoverImg {
+        width: calc(183px + (100vw - 500px) / 2.12);
+        height: calc(183px + (100vw - 500px) / 2.12);
+    }
+    .savedPlayListName, .savedPlayListDataAndArtistName {
+        width: calc(183px + (100vw - 500px) / 2.12);
+    }
+  }

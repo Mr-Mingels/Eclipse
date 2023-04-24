@@ -1,0 +1,1146 @@
+.playListPageWrapper {
+    min-height: 100vh;
+    width: 1280px;
+    margin-left: auto;
+    background: linear-gradient(to top, #0d0d0d 65%, #3b2e3e 100%);
+}
+
+.playListPageLoadingScreen {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 100;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.loadingScreenPlayListPage {
+    background-color: #0d0d0d;
+    min-height: 100vh;
+    width: 1280px;
+    z-index: 100;
+    color: transparent;
+    margin-left: auto;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.playListPageNavWrapper {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 1220px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 44px;
+    padding: 10px 30px 10px 30px;
+    z-index: 1000;
+}
+
+.playListPageLinks {
+    text-decoration: none;
+    color: black;
+}
+
+.playListPageSignUpBtn {
+    padding: 10px 20px 10px 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.playListPageLogInBtn {
+    padding: 10px 20px 10px 20px;
+    margin-left: 20px;
+    border: 0px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.playListPageDetailsWrapper {
+    height: 340px;
+    width: 1280px;
+}
+
+.playListPageDetailsContent {
+    display: flex;
+    align-items: flex-end;
+    height: 316px;
+    width: 1215px;
+    padding: 0 32px 24px 32px;
+}
+
+.playListPageDetailsImgWrapper {
+    height: 232px;
+    width: 232px;
+    margin-right: 24px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+}
+
+.playListPageImg {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 0 4px 60px rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 4px 60px rgba(0,0,0,.5);
+       -moz-box-shadow: 0 4px 60px rgba(0,0,0,.5);
+}
+
+.playListPageDetailsInfoWrapper {
+    color: white;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.playListPageplayListTxt {
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+.playListPageTitleTxt {
+    margin: 0.08em 0px 0.12em;
+    visibility: visible;
+    font-weight: 700;
+    font-size: 48px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.playListPageUserInfoWrapper {
+    margin: 8px 0 4px 0;
+    height: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.playListPageArtistName, .playListPageNumberOfTracks, .playListPageFullAlbumTimeLenght {
+    font-size: 0.875rem;
+    font-weight: 400;
+}
+
+.playListPageCircleElement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 4px;
+    width: 6.4px;
+    height: 19.2px;
+    font-size: 8px;
+}
+
+.playListPageSongsOptionsWrapper {
+    width: 1280px;
+    height: 104px;
+}
+
+.playListPageSongsOptionsContent {
+    width: 1215px;
+    height: 56px;
+    padding: 24px 32px 24px 32px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.playListPagePlayOptionsImgWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 56px;
+    height: 56px;
+    border: 0px;
+    border-radius: 50%;
+    background-color: #653e6f;
+    cursor: pointer;
+}
+
+.playListPagePlayOptionsImgWrapper:hover {
+    transform: scale(1.05);
+}
+
+.playListPagePlayOptionsImg {
+    width: 19px;
+    height: 19px;
+    margin-left: 4px;
+}
+
+.playListPagePlayOptionsImg.paused {
+    width: 21px;
+    height: 21px;
+    margin: 0px;
+}
+
+.playListPageMorePlayListOptionsWrapper {
+    width: 32px;
+    height: 32px;
+    position: relative;
+}
+
+.playListPageMorePlayListOptionsImg {
+    width: 100%;
+    height: 100%;
+}
+
+.playListPageMorePlayListOptionsWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 30px;
+    right: -40px;
+    content: 'More Options';
+    width: 110px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playListPageMoreOptionsModalWrapper {
+    position: absolute;
+    top: 345px;
+    right: 975px;
+    width: 188px;
+    height: 84px;
+    background-color: #282828;
+    display: flex;
+    padding: 4px;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 9999;
+}
+
+.playListPageMoreOptionsModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.playListPageModalButtons {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    border: 0px;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.playListPageModalButtons:hover {
+    background-color: #484848;
+}
+
+.openEditDetailsModalWrapper, .openDeleteModalWrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.openEditDetailsModalContent {
+    position: absolute;
+    width: 450px;
+    height: 180px;
+    background-color: #282828;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    border: 0px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+    z-index: 9999;
+    padding: 24px;
+}
+
+.editPlayListEditDetailsTitle {
+    font-size: 24px;
+    font-weight: 700;
+    height: 38px;
+    color: white;
+    margin-bottom: 24px;
+}
+
+.editPlayListNameInput {
+    height: 35px;
+    background: hsla(0,0%,100%,.2);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: white;
+    outline: none;
+    padding: 0 12px;
+}
+
+.editPlayListBtnWrapper {
+    margin-top: auto;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.editPlayListCloseBtn {
+    border: 0px;
+    height: 46px;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 500px;
+    background-color: white;
+    cursor: pointer;
+}   
+
+.editPlayListSaveBtn {
+    border: 0px;
+    height: 46px;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 500px;
+    background-color: #7d4c89;
+    cursor: pointer;
+}
+
+.editPlayListCloseBtn:hover, .editPlayListSaveBtn:hover {
+    transform: scale(1.05);
+}
+
+.openDeleteModalContent {
+    position: absolute;
+    padding: 32px;
+    width: 356px;
+    height: 149px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 8px;
+}
+
+.deletePlayListTitleTxt {
+    font-size: 22px;
+    font-weight: 700;
+    height: 39px;
+}
+
+.deletePlayListTxt {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.deletePlayListPlayListName {
+    display: inline-block;
+    margin: 0;
+    width: fit-content;
+    max-width: 150px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.deletePlayListBtnWrapper {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.deletePlayListCancelBtn {
+    border: 0px;
+    height: 46px;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 500px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.deletePlayListDeleteBtn {
+    border: 0px;
+    height: 46px;
+    padding: 8px 24px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 500px;
+    background-color: #7d4c89;
+    cursor: pointer;
+}
+
+.deletePlayListDeleteBtn:hover, .deletePlayListCancelBtn:hover {
+    transform: scale(1.05);
+}
+
+.playListPageInfoBar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 1184px;
+    height: 38px;
+    padding: 0 16px;
+    margin: 0 32px;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 1;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+}
+
+.playListPageScrolledInfoBar {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 1184px;
+    height: 38px;
+    color: #b3b3b3;
+    font-size: 14px;
+    font-weight: 400;
+    z-index: 1;
+    border-bottom: 1px solid hsla(0,0%,100%,.1);
+    background-color: #181818;
+    margin: 0;
+    padding: 0 48px;
+    position: fixed;
+    top: 63px;
+}
+
+.playListPageHashTagSec {
+    width: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.playListPageTitleSec {
+    width: 640px;
+}
+
+.playListPageAlbumSec {
+    width: 350px;
+}
+
+.playListPageDurationImgWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 127px;
+}
+
+.playListPageDurationImg {
+    width: 17px;
+    height: 17px;
+}
+
+/* MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION MAIN SECTION */
+
+
+
+
+/* ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED */
+
+
+.playListPageResultsWrapper {
+    padding: 16px 32px 100px 32px; 
+}
+
+.playListPageTrackBox {
+    padding: 0 16px;
+    gap: 16px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    font-weight: 400;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    --toggle-visibility: hidden;
+    --toggle-play-display: none;
+    --toggle-number-display: flex;
+    --toggle-color: #b3b3b3;
+    --toggle-equalizer-display: flex;
+}
+
+.playListPageTrackBox:hover {
+    background-color: rgba(72, 72, 72, 0.5);
+}
+
+.playListPageIndex {
+    color: #b3b3b3;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.playListPageIndex.playing {
+    color: #7d4c89;
+}
+
+.playListPageEqualizerImgWrapper, .playListPagePlayImgWrapper, .playListPagePauseImgWrapper {
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.playListPagePlayImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 21px;
+    right: -40px;
+    content: 'Play Song';
+    width: 90px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playListPagePauseImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 21px;
+    right: -40px;
+    content: 'Pause Song';
+    width: 100px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playListPageEqualizerImg {
+    width: 16px;
+    height: 18px;
+    display: flex;
+}
+
+.playListPagePlayImg, .playListPagePauseImg {
+    width: 14px;
+    height: 14px;
+    display: flex;
+}
+
+.playListPageStartOfTrackBoxWrapper {
+    display: flex;
+    gap: 16px;
+    width: 640px;
+}
+
+.playListPageName-artist-wrapper {
+    width: 583px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.playListPageName {
+    font-size: 16px;
+    color: white;
+    height: 22px;
+}
+
+.playListPageName.playing {
+    color: #7d4c89;
+}
+
+.playListPagetrackArtistName {
+    font-size: 14px;
+    color: #b3b3b3;
+    height: 18px;
+}
+
+.playListPageAlbumCoverImg {
+    height: 40px;
+    width: 40px;
+    border: 0px;
+    border-radius: 5px;
+    pointer-events: none;
+    background-color: #0d0d0d;
+}
+
+.playListPageSongAlbumName {
+    font-size: 14px;
+    color: #b3b3b3;
+    width: 350px;
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis;
+}
+
+.playListPageEndOfTrackBoxWrapper {
+    display: flex;
+    width: 127px;
+    align-items: center;
+    height: 56px;
+    color: #b3b3b3;
+}
+
+.playListPageAllSongLikedIconImgWrapper {
+    margin-top: 2px;
+    margin-left: 2.5px;
+    margin-right: 14.425px;
+    width: 17px;
+    height: 17px;
+    position: relative;
+}
+
+.playListPageAllSongLikedIconImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    bottom: 25px;
+    right: -70px;
+    content: 'Add to Liked Songs';
+    width: 150px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playListPageAllSongLikedIconImg {
+    width: 17px;
+    height: 17px;
+}
+
+.playListPageAllSongLikedIconImgWrapper.liked:hover::before {
+    content: 'Remove From Liked Songs';
+    width: 205px;
+    right: -95px;
+}
+
+.playListPageDuration {
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.playListPageMoreOptionsWrapper {
+    position: relative;
+}
+
+.playListPageMoreOptionsImgWrapper {
+    margin-left: 20px;
+    width: 17px;
+    height: 17px;
+    position: relative;
+}
+
+.playListPageMoreOptionsImgWrapper:hover::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: white;
+    z-index: 50;
+    font-size: 13.5px;
+    font-weight: 400;
+    background-color: #181818;
+    content: 'More Options';
+    bottom: 24px;
+    right: -45px;
+    width: 110px;
+    height: 25px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+       -moz-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.playListPageMoreOptionsImg {
+    width: 17px;
+    height: 17px;
+    visibility: hidden;
+}
+
+.playListPageOpenMoreOptionsModalModalWrapper {
+    position: absolute;
+    width: 224px;
+    right: 0;
+    height: fit-content;
+    background-color: #282828;
+    display: flex;
+    padding: 4px;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+}
+
+.playListPageOpenMoreOptionsModalContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.playListPageAddToPlayListHoverBtn {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    width: 200px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.playListPageAddToPlayListHoverBtn:hover {
+    background-color: #484848;
+}
+
+.playListPageAddToPlayListArrowImg {
+    width: 17px;
+    height: 17px;
+    transform: rotate(90deg);
+    margin-left: auto;
+}
+
+.playListPageSavedPlayListsWrapper {
+    position: absolute;
+    top: -200px;
+    right: 190px;
+    width: 250px;
+    height: 260px;
+}
+
+.playListPageSavedPlayListsContent {
+    width: 100%;
+    background-color: #282828;
+    height: 100%;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 4px;
+    border: 0px;
+    border-radius: 5px;
+    z-index: 9999;
+    box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+    -webkit-box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+       -moz-box-shadow: 0 16px 24px rgba(0,0,0,.3), 0 6px 8px rgba(0,0,0,.2);
+}
+
+.playListPageRenderedPlayListBtn {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    padding: 12px;
+    width: 250px;
+    border-radius: 4px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-user-select: none;
+    user-select: none;
+    border: 0px;
+}
+
+.playListPageRenderedPlayListBtn:hover {
+background-color: #484848;
+}
+
+/* ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED ALBUM TRACK RENDERED */
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1536.1px) and (max-width: 100vw) {
+    .playListPageWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .playListPageNavWrapper {
+        width: calc(1220px + (100vw - 1536px) / 1);
+       }
+       .loadingScreenPlayListPage {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .playListPageDetailsContent {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+            padding-left: calc(32px + (100vw - 1536px) / 45.9);
+            padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .playListPageDetailsWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .playListPageDetailsImgWrapper {
+        width: calc(232px + (100vw - 1536px) / 18.36);
+            height: calc(232px + (100vw - 1536px) / 18.36);
+       }
+       .playListPageTitleTxt {
+        width: calc(930px + (100vw - 1536px) / 1.16);
+        font-size: calc(48px + (100vw - 1536px) / 15.3);
+       }
+       .playListPageSongsOptionsWrapper {
+        width: calc(1280px + (100vw - 1536px) / 1);
+       }
+       .playListPageSongsOptionsContent {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+            padding-left: calc(32px + (100vw - 1536px) / 45.9);
+            padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .playListPageMoreOptionsModalWrapper {
+        top: 345px;
+        right: calc(975px + (100vw - 1536px) / 1.02);
+       }
+       .playListPageResultsWrapper {
+        width: calc(1216px + (100vw - 1536px) / 1.045);
+            padding-left: calc(32px + (100vw - 1536px) / 45.9);
+            padding-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .playListPageInfoBar {
+        width: calc(1184px + (100vw - 1536px) / 1.044);
+            margin-left: calc(32px + (100vw - 1536px) / 45.9);
+            margin-right: calc(32px + (100vw - 1536px) / 45.9);
+       }
+       .playListPageScrolledInfoBar {
+            width: calc(1184px + (100vw - 1536px) / 1.044);
+            padding-left: calc(48px + (100vw - 1536px) / 45.9);
+            padding-right: calc(48px + (100vw - 1536px) / 45.9);
+       }
+       .playListPageTitleSec {
+        width: calc(640px + (100vw - 1536px) / 1.619);
+       }
+       .playListPageStartOfTrackBoxWrapper {
+        width: calc(640px + (100vw - 1536px) / 1.619);
+       }
+       .playListPageAlbumSec {
+        width: calc(350px + (100vw - 1536px) / 2.912);
+       }
+       .playListPageSongAlbumName {
+        width: calc(350px + (100vw - 1536px) / 2.912);
+       }
+  }
+
+@media (max-width: 1536px) {
+   .playListPageWrapper {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .playListPageNavWrapper {
+    width: calc(1220px + (100vw - 1536px) / 1);
+   }
+   .loadingScreenPlayListPage {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .playListPageDetailsContent {
+    width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .playListPageDetailsWrapper {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .playListPageDetailsImgWrapper {
+    width: calc(232px + (100vw - 1536px) / 18.36);
+        height: calc(232px + (100vw - 1536px) / 18.36);
+   }
+   .playListPageTitleTxt {
+    width: calc(930px + (100vw - 1536px) / 1.16);
+   }
+   .playListPageSongsOptionsWrapper {
+    width: calc(1280px + (100vw - 1536px) / 1);
+   }
+   .playListPageSongsOptionsContent {
+    width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .playListPageMoreOptionsModalWrapper {
+    top: 345px;
+    right: calc(975px + (100vw - 1536px) / 1.02);
+   }
+   .playListPageResultsWrapper {
+    width: calc(1216px + (100vw - 1536px) / 1.045);
+        padding-left: calc(32px + (100vw - 1536px) / 45.9);
+        padding-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .playListPageInfoBar {
+    width: calc(1184px + (100vw - 1536px) / 1.044);
+        margin-left: calc(32px + (100vw - 1536px) / 45.9);
+        margin-right: calc(32px + (100vw - 1536px) / 45.9);
+   }
+   .playListPageScrolledInfoBar {
+        width: calc(1184px + (100vw - 1536px) / 1.044);
+        padding-left: calc(48px + (100vw - 1536px) / 45.9);
+        padding-right: calc(48px + (100vw - 1536px) / 45.9);
+   }
+   .playListPageTitleSec {
+    width: calc(640px + (100vw - 1536px) / 1.619);
+   }
+   .playListPageStartOfTrackBoxWrapper {
+    width: calc(640px + (100vw - 1536px) / 1.619);
+   }
+   .playListPageAlbumSec {
+    width: calc(350px + (100vw - 1536px) / 2.912);
+   }
+   .playListPageSongAlbumName {
+    width: calc(350px + (100vw - 1536px) / 2.912);
+   }
+   .openEditDetailsModalContent, .openDeleteModalContent {
+    left: unset;
+    transform: translate(50%, -50%);
+    right: calc(50% + (100vw - 1536px) / 5.8);
+   }
+  }
+
+
+
+
+
+  @media screen and (max-width: 800px) {
+    .playListPageWrapper {
+        width: calc(740px + (100vw - 800px) / 1.045);
+        padding-left: calc(30px + (100vw - 800px) / 45.9);
+        padding-right: calc(30px + (100vw - 800px) / 45.9);
+        margin-left: 0;
+        padding-bottom: 190px;
+       }
+       .playListPageNavWrapper {
+        width: calc(740px + (100vw - 800px) / 1.045);
+        padding-left: calc(30px + (100vw - 800px) / 45.9);
+        padding-right: calc(30px + (100vw - 800px) / 45.9);
+       }
+       .playListPageDetailsContent, .playListPageSongsOptionsContent {
+        width: calc(708px + (100vw - 800px) / 1.047);
+        padding-left: 16px;
+        padding-right: 16px;
+       }
+       .playListPageDetailsWrapper, .playListPageSongsOptionsWrapper{
+        width: calc(740px + (100vw - 800px) / 1.045);
+       }
+       .playListPageDetailsImgWrapper {
+        width: calc(232px + (100vw - 800px) / 4);
+        height: calc(232px + (100vw - 800px) / 4);
+       }
+       .playListPageTitleTxt {
+        width: calc(450px + (100vw - 800px) / 1.4);
+        font-size: calc(64px + (100vw - 800px) / 12);
+       }
+       .playListPageMoreOptionsModalWrapper {
+        top: 345px;
+        right: calc(510px + (100vw - 800px) / 1.05);
+       }
+       .playListPageInfoBar {
+        width: fit-content;
+        margin-left: calc(16px + (100vw - 800px) / 45.9);
+        margin-right: calc(16px + (100vw - 800px) / 45.9);
+       }
+       .playListPageScrolledInfoBar {
+        width: fit-content;
+        right: unset;
+        left: 0;
+        padding-left: calc(62px + (100vw - 800px) / 26);
+        padding-right: calc(62px + (100vw - 800px) / 25);
+       }
+       .playListPageResultsWrapper {
+        width: fit-content;
+       }
+       .playListPageTitleSec, .playListPageStartOfTrackBoxWrapper {
+        width: calc(348px + (100vw - 800px) / 1.5);
+       }
+       .playListPageAlbumSec, .playListPageSongAlbumName {
+        width: calc(132px + (100vw - 800px) / 6.6);
+       }
+       .playListPageDurationImgWrapper, .playListPageEndOfTrackBoxWrapper {
+        width: calc(130px + (100vw - 800px) / 10);
+        }
+        .openEditDetailsModalContent, .openDeleteModalContent {
+            right: unset;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    
+  }
+
+
+
+  @media screen and (max-width: 500px) {
+    .playListPageDetailsWrapper{
+        height: calc(340px + (100vw - 500px) / 1.8);
+       }
+       .playListPageDetailsContent {
+        height: calc(316px + (100vw - 500px) / 1.8);
+       }
+       .playListPageDetailsImgWrapper {
+        width: calc(157px + (100vw - 500px) / 3);
+        height: calc(157px + (100vw - 500px) / 3);
+        margin-right: calc(24px + (100vw - 500px) / 20);
+       }
+       .playListPageTitleTxt {
+        width: calc(214px + (100vw - 500px) / 2);
+        font-size: calc(38px + (100vw - 500px) / 11);
+       }
+       .playListPageUserInfoWrapper {
+        width: calc(214px + (100vw - 500px) / 2.3);
+         height: calc(22px + (100vw - 500px) / 20);
+       }
+       .playListPageArtistName, .playListPageNumberOfTracks, .playListPageFullAlbumTimeLenght, .playListPageplayListTxt {
+        font-size: calc(14px + (100vw - 500px) / 30);
+        }
+        .playListPageCircleElement {
+            font-size: calc(8px + (100vw - 500px) / 50);
+        }
+       .playListPageMoreOptionsModalWrapper {
+        top: calc(345px + (100vw - 500px) / 2);
+        right: calc(240px + (100vw - 500px) / 1);
+       }
+       .playListPageInfoBar {
+        margin-left: calc(10px + (100vw - 500px) / 22);
+        margin-right: calc(10px + (100vw - 500px) / 22);
+       }
+       .playListPageScrolledInfoBar {
+        padding-left: calc(50px + (100vw - 500px) / 14.352);
+        padding-right: calc(50px + (100vw - 500px) / 14.352);
+       }
+       .playListPageResultsWrapper {
+        padding-left: calc(10px + (100vw - 500px) / 15);
+        padding-right: calc(10px + (100vw - 500px) / 15);
+       }
+       .playListPageTitleSec, .playListPageStartOfTrackBoxWrapper {
+        width: calc(285px + (100vw - 500px) / 1.149);
+       }
+       .playListPageDurationImgWrapper, .playListPageEndOfTrackBoxWrapper {
+        width: 100px
+        }
+        .playListPageHashTagSec, .playListPageAlbumSec, .playListPageSongAlbumName {
+            display: none;
+        }
+        .playListPageIndex {
+            --toggle-number-display: none;
+        }
+        .playListPagePlayImgWrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+        }
+        .playListPagePlayImgWrapper:hover::before {
+            bottom: 30px;
+            right: -25px;
+        }
+        .playListPagePauseImgWrapper {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            width: 40px;
+            height: 40px;
+        }
+        .playListPagePauseImgWrapper:hover::before {
+            bottom: 30px;
+            right: -30px;
+        }
+        .playListPageEqualizerImgWrapper {
+            display: none;
+            --toggle-equalizer-display: none;
+        }
+        .openEditDetailsModalContent {
+            width: calc(400px + (100vw - 500px) / 1.15);
+            top: calc(50% + (100vw - 500px) / 2);
+        }
+        .openDeleteModalContent {
+            width: calc(356px + (100vw - 500px) / 1.5);
+            padding: calc(32px + (100vw - 500px) / 25);
+            top: calc(50% + (100vw - 500px) / 2);
+        }
+        .editPlayListCloseBtn, .editPlayListSaveBtn, .deletePlayListCancelBtn, .deletePlayListDeleteBtn {
+            height: calc(46px + (100vw - 500px) / 25);
+            padding-right: calc(24px + (100vw - 500px) / 25);
+            padding-left: calc(24px + (100vw - 500px) / 25);
+        }
+        .deletePlayListTitleTxt {
+            font-size: calc(22px + (100vw - 500px) / 54);
+        }
+  }

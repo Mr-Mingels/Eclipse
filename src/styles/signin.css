@@ -1,0 +1,103 @@
+.signInWrapper {
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.signInContent {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+}
+
+.backgroundImgSignIn {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-background-size: cover; /* Safari and Chrome */
+    -moz-background-size: cover; /* Firefox */
+    -o-background-size: cover; /* Opera */
+    background-size: cover; /* Standard syntax */
+}
+
+.formH1ElementSignIn {
+    color: white;
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.signInForm {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    padding: 50px;
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: rgba(13, 13, 13, 0.8); /* 80% opaque */
+}
+
+.signInFormLogInBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-top: 40px;
+    width: 125px;
+    height: 25px;
+    padding: 18px;
+    font-size: 1rem;
+    background: linear-gradient(to top, #000000, #231b25);
+    color: white;
+    border: 0px;
+    border-radius: 40px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.loadingScreenSignIn {
+    background-color: #0d0d0d;
+    height: 100vh;
+    width: 100%;
+    color: transparent;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none;
+    pointer-events: none;
+    -webkit-transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+    transform: translate3d(0, 0, 0); /* Fix flickering on some browsers */
+}
+
+.signInNotice {
+    font-size: 10px;
+    margin-top: 20px;
+    color: rgb(211, 211, 211);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 500px) {
+    .signInForm {
+        width: calc(350px + (100vw - 500px) / 1.5);
+        padding: calc(50px + (100vw - 500px) / 8);
+    }
+    .formH1ElementSignIn {
+        font-size: calc(26px + (100vw - 500px) / 50);
+        margin-bottom: calc(40px + (100vw - 500px) / 10);
+    }
+    .signInFormLogInBtn {
+        margin-top: calc(40px + (100vw - 500px) / 10);
+    }
+  }
+  
