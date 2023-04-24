@@ -60,7 +60,6 @@ const Home = ({ displayName, accessToken }) => {
           }
     
           const data = await response.json();
-          console.log(data.items);
           setTopArtists(data.items);
           setFetchedTopArtists(true)
           if(data.items.length === 0) {
@@ -90,7 +89,6 @@ const Home = ({ displayName, accessToken }) => {
           }
     
           const data = await response.json();
-          console.log(data.playlists.items);
           setRecommendedPlaylists(data.playlists.items);
           setFetchedRecommendedPlayLists(true)
           if(data.playlists.items.length === 0) {
@@ -120,7 +118,6 @@ const Home = ({ displayName, accessToken }) => {
           }
     
           const data = await response.json();
-          console.log(data.albums.items);
           setNewReleases(data.albums.items);
           setFetchedNewReleases(true)
           if(data.albums.items.length === 0) {

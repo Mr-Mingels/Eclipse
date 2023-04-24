@@ -5,8 +5,7 @@ import searchIcon from '../assets/searchIcon.png'
 import collection from '../assets/collection.png'
 import addNewIcon from '../assets/addNewIcon.png'
 import heart from '../assets/heart.png'
-import { Link, Outlet, useNavigate, useLocation } from 'react-router-dom';
-import Home from "./home";
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const SideBar = ({ userId, accessToken, savedPlayListData }) => {
 
@@ -20,7 +19,6 @@ const SideBar = ({ userId, accessToken, savedPlayListData }) => {
   const location = useLocation()
 
   const handleHoverOn = (event) => {
-    console.log('hovered')
     const sideBarRenderedPlayListNameWrapper = event.target.closest(".sideBarRenderedPlayListNameWrapper");
     sideBarRenderedPlayListNameWrapper.style.setProperty("--toggle-color", "white");
   }
@@ -62,7 +60,6 @@ const SideBar = ({ userId, accessToken, savedPlayListData }) => {
             shouldFetchMore = false;
           }
         }
-        console.log(allPlaylists);
         return allPlaylists;
       };
 
@@ -89,7 +86,6 @@ const SideBar = ({ userId, accessToken, savedPlayListData }) => {
           }
       
           const data = await response.json();
-          console.log('Playlist created:', data);
           return data.id; // returns the created playlist's ID
         } catch (error) {
           console.error('Error:', error);
@@ -108,8 +104,6 @@ const SideBar = ({ userId, accessToken, savedPlayListData }) => {
             const playlistName = `My PlayList #${latestPlaylists.length + 1}`; // change this to the desired playlist name
             const isPublic = true; // set this to false if you want to create a private playlist
             const playlistId = await createPlaylist(accessToken, userId, playlistName, isPublic);
-            console.log("Created playlist ID:", playlistId);
-            console.log(latestPlaylists);
             setPlaylistsUpdated(!playlistsUpdated);
             navigate(`/playlist/${playlistId}`);
           }
@@ -131,7 +125,6 @@ const SideBar = ({ userId, accessToken, savedPlayListData }) => {
       }, [accessToken, playlistsUpdated, savedPlayListData]);
 
       const toggleBodyScroll = (disable) => {
-        console.log('true')
         document.body.style.overflow = disable ? 'hidden' : 'auto';
       };
 

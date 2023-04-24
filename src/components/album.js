@@ -50,14 +50,12 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
         const trackUris = albumTracks.map(song => song.uri);
         
         if (arraysAreEqual(theCurrentTrackPlaying, trackUris) && togglePlay) {
-            console.log('totes true');
             setPlayingAlbum(true);
         }
     }, [togglePlay, location, albumTracks]);
 
     useEffect(() => {
         if (accessToken === '') {
-            console.log('returned')
             return;
         }
         searchAlbums(id)
@@ -220,7 +218,6 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
           });
       
           if (response.ok) {
-            console.log('Track removed from liked songs');
             setLikedTracksChanged((prev) => !prev);
             // Update the local state to reflect the change
             setLikedTracks((prevLikedTracks) => {
@@ -322,7 +319,6 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
           });
       
           if (response.ok) {
-            console.log('Album added to your library');
             if (savedAlbumsChanged) {
               setSavedAlbumsChanged(false)
             } else {
@@ -346,7 +342,6 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
           });
       
           if (response.ok) {
-            console.log('Album removed from your library');
             if (savedAlbumsChanged) {
               setSavedAlbumsChanged(false)
             } else {
@@ -409,7 +404,6 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
 
       useEffect(() => {
         const handleClickOutside = (event) => {
-          console.log('clicked')
           if (clickedTrackIndex !== null &&
             !event.target.closest(".albumPageMoreOptionsWrapper") &&
             !event.target.closest(".albumPageOpenMoreOptionsModalContent")) {
@@ -496,7 +490,6 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
             shouldFetchMore = false;
           }
         }
-        console.log(allPlaylists);
         setFetchedPlayLists(true)
         setIsLoading(false)
         return allPlaylists;
@@ -513,7 +506,6 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
   
       const addTrackToPlaylist = async (playlistId, trackUri) => {
         setClickedTrackIndex(null)
-        console.log(trackUri)
         const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
           method: 'POST',
           headers: {
@@ -524,7 +516,6 @@ const Album = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePla
         });
       
         if (response.ok) {
-          console.log(`Track added to playlist ${playlistId}`);
           setHoveringRenderedPlayLists(false)
         } else {
           console.error(`Error adding track to playlist: ${response.statusText}`);

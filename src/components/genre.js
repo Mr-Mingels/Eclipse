@@ -60,17 +60,14 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
 
     useEffect(() => {
         if (accessToken === '') {
-            console.log('returned')
             return;
         }
-        console.log(id)
         searchArtists(id)
         searchAlbums(id)
         searchSongs(id)
       }, [accessToken, id])
 
       const searchArtists = async (urlParameter) => {
-        console.log(urlParameter)
         const searchParameters = {
             method: "GET",
             headers: {
@@ -97,7 +94,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
           } else {
             setNoArtistResults(false)
           }
-          console.log(...data.artists.items)
         } catch (error) {
           console.error(error)
           setNoArtistResults(true)
@@ -120,9 +116,7 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
             searchParameters
           );
         const data = await response.json();
-        console.log(data)
         const newTopResults = [...data.playlists.items];
-        console.log(newTopResults)
         
         newTopResults.sort((a, b) => b.popularity - a.popularity) // sort by popularity, descending
         setGenreAlbum(newTopResults)
@@ -163,7 +157,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
     
       const sortedTracks = tracks
         .sort((a, b) => b.popularity - a.popularity) // sort by popularity, descending
-      console.log(sortedTracks);
       const tracksWithDuration = sortedTracks.map((track) => {
           const durationInSeconds = Math.floor(track.duration_ms / 1000);
           const minutes = Math.floor(durationInSeconds / 60);
@@ -184,7 +177,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
         } else {
           setNoTrackResults(false)
         }
-      console.log(tracksWithDuration)
       } catch (error) {
         console.error(error)
         setNoTrackResults(true)
@@ -219,7 +211,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
           });
       
           if (response.ok) {
-            console.log('Track removed from liked songs');
             setLikedTracksChanged((prev) => !prev);
             // Update the local state to reflect the change
             setLikedTracks((prevLikedTracks) => {
@@ -282,13 +273,9 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
       };
 
       const PlayClickedSong = (track) => {
-        console.log(track.id)
-        console.log(theCurrentTrackPlaying)
         if(!isPremium) return
         if(currentTrackUri === track.uri || theCurrentTrackPlaying === track.uri) {
           setTogglePlay(true)
-          console.log('clicked play')
-          console.log(togglePlay)
         }
           setCurrentTrackUri(track.uri)
       }
@@ -298,13 +285,11 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
       },[currentTrackUri])
 
       const PauseSong = () => {
-        console.log('paused')
         setTogglePlay(false)
       }
 
       useEffect(() => {
         const handleClickOutside = (event) => {
-          console.log('clicked')
           if (clickedTrackIndex !== null &&
             !event.target.closest(".genreSongMoreOptionsWrapper") &&
             !event.target.closest(".genreOpenMoreOptionsModalContent")) {
@@ -351,7 +336,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
   
       useEffect(() => {
         const disableScroll = (e) => {
-          console.log(hoveringRenderedPlayLists)
           if (hoveringRenderedPlayLists) return
           if (clickedTrackIndex !== null) {
             e.preventDefault();
@@ -392,7 +376,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
             shouldFetchMore = false;
           }
         }
-        console.log(allPlaylists);
         setFetchedPlayLists(true)
         setIsLoading(false)
         return allPlaylists;
@@ -409,7 +392,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
   
       const addTrackToPlaylist = async (playlistId, trackUri) => {
         setClickedTrackIndex(null)
-        console.log(trackUri)
         const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
           method: 'POST',
           headers: {
@@ -420,7 +402,6 @@ const Genre = ({ accessToken, theCurrentTrackPlaying, togglePlay, setTogglePlay,
         });
       
         if (response.ok) {
-          console.log(`Track added to playlist ${playlistId}`);
           setHoveringRenderedPlayLists(false)
         } else {
           console.error(`Error adding track to playlist: ${response.statusText}`);

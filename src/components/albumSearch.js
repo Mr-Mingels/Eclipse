@@ -18,17 +18,11 @@ const AlbumSearch = ({ searchInput, accessToken }) => {
       event.preventDefault();
     };
 
-    useEffect(() => {
-      console.log(albums)
-    },[albums])
-
       useEffect(() => { 
         if (accessToken === '') {
-            console.log('returned')
             return;
         }
         searchAlbums(searchInput)
-        console.log(searchInput)
     },[searchInput, location, accessToken])
 
     

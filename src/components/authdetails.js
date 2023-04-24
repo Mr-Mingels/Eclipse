@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { onAuthStateChanged, signOut } from "firebase/auth";
-import { auth } from '../config/firebase.js'
 import sortUp from '../assets/sortUp.png'
 import '../styles/authdetails.css'
 

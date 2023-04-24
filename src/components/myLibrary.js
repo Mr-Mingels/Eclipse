@@ -2,14 +2,6 @@ import React, { useEffect, useState } from "react";
 import '../styles/mylibrary.css'
 import AuthDetails from "./authdetails";
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import likedSongImg from '../assets/likedSongImg.png'
-import pause from '../assets/pause.png'
-import play from '../assets/play.png'
-import time from '../assets/time.png'
-import musicalNote from '../assets/musicalNote.png'
-import purpleLikedIcon from '../assets/purpleLikedIcon.png'
-import equalizer from '../assets/equalizer.png'
-import more from '../assets/more.png'
 
 const MyLibrary = ({ displayName }) => {
     const [signedIn, setSignedIn] = useState(false)

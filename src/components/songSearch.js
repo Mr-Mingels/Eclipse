@@ -1,6 +1,6 @@
 import '../styles/songSearch.css'
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import time from '../assets/time.png'
 import musicalNote from '../assets/musicalNote.png'
 import likedIcon from '../assets/likedIcon.png'
@@ -51,14 +51,12 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
 
       useEffect(() => { 
             if (accessToken === '') {
-                console.log('returned')
                 return;
             }
             search(searchInput)
     },[searchInput, location, accessToken])
 
     const search = async (input) => {
-        console.log(`Searched for ${input}`);
       
         const searchParameters = {
           method: "GET",
@@ -77,7 +75,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
         searchParameters
       );
       const data = await response.json();
-      console.log(data)
       tracks.push(...data.tracks.items);
 
       if (data.tracks.items.length < 50) {
@@ -96,7 +93,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
       
             return bSimilarity - aSimilarity;
           });
-        console.log(sortedTracks);
         const tracksWithDuration = sortedTracks.map((track) => {
             const durationInSeconds = Math.floor(track.duration_ms / 1000);
             const minutes = Math.floor(durationInSeconds / 60);
@@ -124,13 +120,9 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
       };
 
       const PlayClickedSong = (track) => {
-        console.log(track.id)
-        console.log(theCurrentTrackPlaying)
         if(!isPremium) return
         if(currentTrackUri === track.uri || theCurrentTrackPlaying === track.uri) {
           setTogglePlay(true)
-          console.log('clicked play')
-          console.log(togglePlay)
         }
           setCurrentTrackUri(track.uri)
       }
@@ -140,7 +132,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
       },[currentTrackUri])
 
       const PauseSong = () => {
-        console.log('paused')
         setTogglePlay(false)
       }
 
@@ -168,7 +159,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
           });
       
           if (response.ok) {
-            console.log('Track removed from liked songs');
             setLikedTracksChanged((prev) => !prev);
             // Update the local state to reflect the change
             setLikedTracks((prevLikedTracks) => {
@@ -243,7 +233,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
 
     useEffect(() => {
       const handleClickOutside = (event) => {
-        console.log('clicked')
         if (clickedTrackIndex !== null &&
           !event.target.closest(".songMoreOptionsWrapper") &&
           !event.target.closest(".songOpenMoreOptionsModalContent")) {
@@ -290,7 +279,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
 
     useEffect(() => {
       const disableScroll = (e) => {
-        console.log(hoveringRenderedPlayLists)
         if (hoveringRenderedPlayLists) return
         if (clickedTrackIndex !== null) {
           e.preventDefault();
@@ -331,7 +319,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
           shouldFetchMore = false;
         }
       }
-      console.log(allPlaylists);
       setFetchedPlayLists(true)
       setIsLoading(false)
       return allPlaylists;
@@ -348,7 +335,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
 
     const addTrackToPlaylist = async (playlistId, trackUri) => {
       setClickedTrackIndex(null)
-      console.log(trackUri)
       const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
         method: 'POST',
         headers: {
@@ -359,7 +345,6 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
       });
     
       if (response.ok) {
-        console.log(`Track added to playlist ${playlistId}`);
         setHoveringRenderedPlayLists(false)
       } else {
         console.error(`Error adding track to playlist: ${response.statusText}`);

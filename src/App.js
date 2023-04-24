@@ -46,14 +46,12 @@ function App({ getAccessToken, getTrack, togglePlay, setTogglePlay, theCurrentTr
   }, [code, navigate]);
 
   const chooseTrack = (track) => {
-    console.log(track)
     setPlayingTrack(track)
   }
 
   useEffect(() => {
     if(playingTrack) {
       getTrack(playingTrack)
-      console.log(playingTrack)
     }
   },[playingTrack])
 
@@ -61,7 +59,6 @@ function App({ getAccessToken, getTrack, togglePlay, setTogglePlay, theCurrentTr
     if(accessToken) {
       getAccessToken(accessToken)
     }
-    console.log(accessToken)
   },[accessToken])
 
 
@@ -81,7 +78,6 @@ function App({ getAccessToken, getTrack, togglePlay, setTogglePlay, theCurrentTr
 
   const getSearchInput = (data) => {
     setSearchInput(data)
-    console.log(searchInput)
   }
 
   const getSavedPlayListsData = (data) => {
@@ -141,10 +137,6 @@ function Root() {
   const [theCurrentTrackPlaying, setTheCurrentTrackPlaying] = useState()
   const [currentLocation, setCurrentLocation] = useState();
   const [isPremium, setIsPremium] = useState()
-
-  useEffect(() => {
-    console.log(togglePlay)
-  },[togglePlay])
 
   const getTrack = (track) => {
     setPlayingTrack(track)

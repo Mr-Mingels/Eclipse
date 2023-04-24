@@ -14,28 +14,18 @@ const Player = ({accessToken, trackUri, getPlay, getCurrentTrackPlaying, toggleP
 
     useEffect(() => {
         if (play === null) {
-            console.log('is null')
         }
         if (!trackUri || play === null) return
-            console.log(play)
             setPlay(togglePlay);
     },[togglePlay])
 
     useEffect(() =>{
         
         if (play === null) {
-            console.log('is null')
         }
         if (!trackUri || play === null) return
-        console.log(play)
         getPlay(play)
     },[play])
-
-    useEffect(() => {
-        console.log(togglePlay)
-        console.log(play)
-    },[play])
-
 
     useEffect(() => {
         if(!accessToken) return

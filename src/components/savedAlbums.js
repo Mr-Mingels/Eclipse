@@ -9,7 +9,6 @@ const SavedAlbums = ({ accessToken, displayName }) => {
     const [isLoading, setIsLoading] = useState(true)
     const [noResults, setNoResults] = useState(false)
     const [fetchedAlbums, setFetchedAlbums] = useState(false)
-    const location = useLocation()
 
     const handleLoad = () => {
         setIsLoading(false)
@@ -63,15 +62,10 @@ const SavedAlbums = ({ accessToken, displayName }) => {
         if (accessToken) {
             fetchSavedAlbums(accessToken).then((albums) => {
             // Do something with the playlists
-            console.log(albums)
             setSavedAlbums(albums)
           });
         }
       }, [accessToken]);
-
-      useEffect(() => {
-        console.log(savedAlbums)
-      },[savedAlbums])
     
       if (!fetchedAlbums) {
         return <div className='savedAlbumsLoadingScreen'>Invicible Space</div>;

@@ -21,15 +21,16 @@ export default function useAuth(code) {
                     window.history.pushState({}, null, '/');
                 })
                 .catch((err) => {
-                  console.error('Error in /login:', err);
-              })              
+                    console.log(err)
+                    window.location = '/login'
+                })
             }
           },[code])
 
     useEffect(() => {
       if(!refreshToken || !expiresIn) return
         const interval = setInterval(() => {
-            console.log('hi')
+            console.log('refreshed token')
           axios
             .post("https://eclipse-spotify-clone.herokuapp.com/refresh", {
               refreshToken,
@@ -39,8 +40,9 @@ export default function useAuth(code) {
               setExpiresIn(res.data.expiresIn);
             })
             .catch((err) => {
-              console.error('Error in /refresh:', err);
-          })
+              console.log(err);
+              window.location = "/login";
+            });
         }, (expiresIn - 60) * 1000);
       
         return () => clearInterval(interval);

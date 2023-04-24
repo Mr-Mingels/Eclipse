@@ -3,9 +3,8 @@ import '../styles/signin.css'
 import { useState } from "react";
 import backgroundImg from '../assets/backgroundImg.png'
 
-const SignInPage = ({ code }) => {
+const SignInPage = () => {
     const [isLoading, setIsLoading] = useState(true);
-    console.log(code)
 
     
     const handleImageLoad = () => {

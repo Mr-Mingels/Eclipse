@@ -1,13 +1,7 @@
 import '../styles/savedplaylists.css'
 import React, { useEffect, useState } from "react";
-import { useParams, Link } from 'react-router-dom';
-import defaultProfileImg from '../assets/profile-avatar.png'
+import { Link } from 'react-router-dom';
 import musicalNote from '../assets/musicalNote.png'
-import purpleLikedIcon from '../assets/purpleLikedIcon.png'
-import likedIcon from '../assets/likedIcon.png'
-import more from '../assets/more.png'
-import play from '../assets/play.png'
-import pause from '../assets/pause.png'
 
 const SavedPlayLists = ({ accessToken, displayName, getSavedPlayListsData }) => {
 
@@ -40,7 +34,6 @@ const SavedPlayLists = ({ accessToken, displayName, getSavedPlayListsData }) => 
         if (!response.ok) {
           console.error(`Error fetching liked songs: ${response.statusText}`);
           if (allLikedSongs.length === 0) {
-            console.log("No liked songs");
             setLikedSongs([]);
           }
           return;
@@ -58,10 +51,8 @@ const SavedPlayLists = ({ accessToken, displayName, getSavedPlayListsData }) => 
       }
     
       if (allLikedSongs.length === 0) {
-        console.log("No liked songs");
         setLikedSongs([]);
       } else {
-        console.log(allLikedSongs);
         setLikedSongs(allLikedSongs);
       }
     };
@@ -101,7 +92,6 @@ const SavedPlayLists = ({ accessToken, displayName, getSavedPlayListsData }) => 
             shouldFetchMore = false;
           }
         }
-        console.log(allPlaylists);
         setFetchedPlayLists(true)
         setIsLoading(false)
         return allPlaylists;

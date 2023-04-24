@@ -58,19 +58,16 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
 
       useEffect(() => { 
             if (accessToken === '') {
-                console.log('returned')
                 return;
             }
             searchSongs(searchInput)
             searchArtists(searchInput)
             searchAlbums(searchInput)
-            console.log(searchInput)
     },[searchInput, location, accessToken])
 
     /*SEARCH FOR THE 4 TRACKS BY MOST SIMILAR TO SEARCH RESULT AND THE MOST POPULAR*/ 
 
     const searchSongs = async (input) => {
-        console.log(`Searched for ${input}`);
       
         const searchParameters = {
           method: "GET",
@@ -96,7 +93,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
     
           return bSimilarity - aSimilarity;
         });
-      console.log(sortedTracks);
       const tracksWithDuration = sortedTracks.map((track) => {
           const durationInSeconds = Math.floor(track.duration_ms / 1000);
           const minutes = Math.floor(durationInSeconds / 60);
@@ -115,7 +111,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
         } else {
           setNoTrackResults(false)
         }
-      console.log(tracksWithDuration)
       } catch (error) {
         console.error(error)
         setIsLoading(false)
@@ -151,7 +146,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
           } else {
             setNoArtistResults(false)
           }
-          console.log(...data.artists.items)
         } catch (error) {
           console.error(error)
           setIsLoading(false)
@@ -174,7 +168,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
           );
         const data = await response.json();
         const newTopResults = [...data.albums.items];
-        console.log(newTopResults)
         
         newTopResults.sort((a, b) => b.popularity - a.popularity)
           setAlbumResults(newTopResults)
@@ -217,7 +210,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
           });
       
           if (response.ok) {
-            console.log('Track removed from liked songs');
             setLikedTracksChanged((prev) => !prev);
             // Update the local state to reflect the change
             setLikedTracks((prevLikedTracks) => {
@@ -282,13 +274,9 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
       };
 
       const PlayClickedSong = (track) => {
-        console.log(track.id)
-        console.log(theCurrentTrackPlaying)
         if(!isPremium) return
         if(currentTrackUri === track.uri || theCurrentTrackPlaying === track.uri) {
           setTogglePlay(true)
-          console.log('clicked play')
-          console.log(togglePlay)
         }
           setCurrentTrackUri(track.uri)
       }
@@ -298,7 +286,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
       },[currentTrackUri])
 
       const PauseSong = () => {
-        console.log('paused')
         setTogglePlay(false)
       }
 
@@ -313,7 +300,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
 
     useEffect(() => {
       const handleClickOutside = (event) => {
-        console.log('clicked')
         if (clickedTrackIndex !== null &&
           !event.target.closest(".allSongMoreOptionsWrapper") &&
           !event.target.closest(".allSongOpenMoreOptionsModalContent")) {
@@ -400,7 +386,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
           shouldFetchMore = false;
         }
       }
-      console.log(allPlaylists);
       setFetchedPlayLists(true)
       setIsLoading(false)
       return allPlaylists;
@@ -417,7 +402,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
 
     const addTrackToPlaylist = async (playlistId, trackUri) => {
       setClickedTrackIndex(null)
-      console.log(trackUri)
       const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
         method: 'POST',
         headers: {
@@ -428,7 +412,6 @@ const AllSearch = ({ searchInput, accessToken, theCurrentTrackPlaying, togglePla
       });
     
       if (response.ok) {
-        console.log(`Track added to playlist ${playlistId}`);
         setHoveringRenderedPlayLists(false)
       } else {
         console.error(`Error adding track to playlist: ${response.statusText}`);

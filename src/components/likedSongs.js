@@ -42,7 +42,6 @@ const LikedSongs = ({ displayName, accessToken, chooseTrack, togglePlay, setTogg
       if (!likedSongs) return
         const likedTracksList = likedSongs.map(song => song.uri);
       if (arraysAreEqual(theCurrentTrackPlaying, likedTracksList) && togglePlay) {
-        console.log('correct')
         setPlayingLikedSongs(true)
       }
   },[togglePlay, likedSongs, location])
@@ -233,7 +232,6 @@ const LikedSongs = ({ displayName, accessToken, chooseTrack, togglePlay, setTogg
 
       useEffect(() => {
         const handleClickOutside = (event) => {
-          console.log('clicked')
           if (clickedTrackIndex !== null &&
             !event.target.closest(".likedSongMoreOptionsWrapper") &&
             !event.target.closest(".likedSongpenMoreOptionsModalContent")) {
@@ -280,7 +278,6 @@ const LikedSongs = ({ displayName, accessToken, chooseTrack, togglePlay, setTogg
   
       useEffect(() => {
         const disableScroll = (e) => {
-          console.log(hoveringRenderedPlayLists)
           if (hoveringRenderedPlayLists) return
           if (clickedTrackIndex !== null) {
             e.preventDefault();
@@ -321,7 +318,6 @@ const LikedSongs = ({ displayName, accessToken, chooseTrack, togglePlay, setTogg
             shouldFetchMore = false;
           }
         }
-        console.log(allPlaylists);
         setFetchedPlayLists(true)
         setIsLoading(false)
         return allPlaylists;
@@ -338,7 +334,6 @@ const LikedSongs = ({ displayName, accessToken, chooseTrack, togglePlay, setTogg
   
       const addTrackToPlaylist = async (playlistId, trackUri) => {
         setClickedTrackIndex(null)
-        console.log(trackUri)
         const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
           method: 'POST',
           headers: {
@@ -349,7 +344,6 @@ const LikedSongs = ({ displayName, accessToken, chooseTrack, togglePlay, setTogg
         });
       
         if (response.ok) {
-          console.log(`Track added to playlist ${playlistId}`);
           setHoveringRenderedPlayLists(false)
         } else {
           console.error(`Error adding track to playlist: ${response.statusText}`);

@@ -20,11 +20,9 @@ const ArtistSearch = ({ searchInput, accessToken }) => {
 
     useEffect(() => { 
         if (accessToken === '') {
-            console.log('returned')
             return;
         }
         searchArtists(searchInput)
-        console.log(searchInput)
     },[searchInput, location, accessToken])
 
 
@@ -42,7 +40,6 @@ const ArtistSearch = ({ searchInput, accessToken }) => {
             searchParameters
           );
         const data = await response.json();
-        console.log(data.artists.items.length)
         const newTopResults = [...data.artists.items];
         
         newTopResults.sort((a, b) => b.popularity - a.popularity)

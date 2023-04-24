@@ -8,8 +8,6 @@ import musicalNote from '../assets/musicalNote.png'
 import purpleLikedIcon from '../assets/purpleLikedIcon.png'
 import likedIcon from '../assets/likedIcon.png'
 import more from '../assets/more.png'
-import time from '../assets/time.png'
-import likedSongImg from '../assets/likedSongImg.png'
 import play from '../assets/play.png'
 import equalizer from '../assets/equalizer.png'
 import pause from '../assets/pause.png'
@@ -52,7 +50,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
         const trackUris = artistTopTracks.map(song => song.uri);
         
         if (arraysAreEqual(theCurrentTrackPlaying, trackUris) && togglePlay) {
-            console.log('totes true');
             setPlayingAlbum(true);
         }
     }, [togglePlay, location, artistTopTracks]);
@@ -141,10 +138,8 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
 
     useEffect(() => {
         if (accessToken === '') {
-            console.log('returned')
             return;
         }
-        console.log(id)
         fetchArtistInfo(id)
         fetchArtistAlbums(id)
         fetchArtistTopTracks(id)
@@ -165,15 +160,11 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
           );
         const data = await response.json();
         setArtistInfo(data)
-        console.log(data)
         }catch (error) {
           console.error(error)
         }
     };
 
-    useEffect(() => {
-      console.log(artistInfo)
-    },[artistInfo])
 
     const fetchArtistAlbums = async (artistId) => {
         const searchParameters = {
@@ -191,7 +182,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
           const data = await response.json();
           const filteredAlbums = filterDuplicateAlbums(data.items);
           setArtistAlbums(filteredAlbums)
-          console.log('Albums:', data.items);
         } catch (error) {
           console.error(error);
         }
@@ -335,7 +325,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
           });
       
           if (response.ok) {
-            console.log('Track removed from liked songs');
             setLikedTracksChanged((prev) => !prev);
             // Update the local state to reflect the change
             setLikedTracks((prevLikedTracks) => {
@@ -387,7 +376,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
                 shouldFetchMore = false;
             }
         }
-        console.log(allArtists);
         return allArtists;
     };
     
@@ -459,7 +447,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
       
       useEffect(() => {
         const handleClickOutside = (event) => {
-          console.log('clicked')
           if (clickedTrackIndex !== null &&
             !event.target.closest(".artistPageMoreOptionsWrapper") &&
             !event.target.closest(".artistPageOpenMoreOptionsModalContent")) {
@@ -506,7 +493,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
   
       useEffect(() => {
         const disableScroll = (e) => {
-          console.log(hoveringRenderedPlayLists)
           if (hoveringRenderedPlayLists) return
           if (clickedTrackIndex !== null) {
             e.preventDefault();
@@ -547,7 +533,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
             shouldFetchMore = false;
           }
         }
-        console.log(allPlaylists);
         setFetchedPlayLists(true)
         setIsLoading(false)
         return allPlaylists;
@@ -564,7 +549,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
   
       const addTrackToPlaylist = async (playlistId, trackUri) => {
         setClickedTrackIndex(null)
-        console.log(trackUri)
         const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
           method: 'POST',
           headers: {
@@ -575,7 +559,6 @@ const Artist = ({ displayName, accessToken, chooseTrack, togglePlay, setTogglePl
         });
       
         if (response.ok) {
-          console.log(`Track added to playlist ${playlistId}`);
           setHoveringRenderedPlayLists(false)
         } else {
           console.error(`Error adding track to playlist: ${response.statusText}`);

@@ -8,7 +8,6 @@ import purpleLikedIcon from '../assets/purpleLikedIcon.png'
 import likedIcon from '../assets/likedIcon.png'
 import more from '../assets/more.png'
 import time from '../assets/time.png'
-import likedSongImg from '../assets/likedSongImg.png'
 import play from '../assets/play.png'
 import equalizer from '../assets/equalizer.png'
 import pause from '../assets/pause.png'
@@ -65,7 +64,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
         if (accessToken === '') {
             return;
         }
-        console.log(id)
         searchPlayList(id)
       }, [accessToken, id, location])
 
@@ -154,9 +152,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
       const playPlayList = () => {
         if(!isPremium) return
         if (!playListTracks || playListTracks.length <= 0) return;
-        console.log(playListTracks.length)
-        console.log('played')
-        console.log(playListTracks)
         const trackUris = playListTracks.map(song => song.track.uri);
         setCurrentTrackUri(trackUris);
         setPlayingPlayList(true)
@@ -257,7 +252,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
           });
       
           if (response.ok) {
-            console.log('Track removed from liked songs');
             setLikedTracksChanged((prev) => !prev);
             // Update the local state to reflect the change
             setLikedTracks((prevLikedTracks) => {
@@ -388,7 +382,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
       
         if (!newName || newName.trim() === '') {
           // Handle empty input or spaces-only input
-          console.log('Please enter a valid name for the playlist.');
           return;
         }
       
@@ -435,7 +428,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
           });
       
           if (response.ok) {
-            console.log('Playlist deleted successfully.');
             // Redirect or update the UI to reflect the deletion
             navigate('/collection/playlists');
           } else {
@@ -448,7 +440,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
       
       useEffect(() => {
         const handleClickOutside = (event) => {
-          console.log('clicked')
           if (clickedTrackIndex !== null &&
             !event.target.closest(".playListPageMoreOptionsWrapper") &&
             !event.target.closest(".playListPageOpenMoreOptionsModalContent")) {
@@ -495,7 +486,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
   
       useEffect(() => {
         const disableScroll = (e) => {
-          console.log(hoveringRenderedPlayLists)
           if (hoveringRenderedPlayLists) return
           if (clickedTrackIndex !== null) {
             e.preventDefault();
@@ -536,7 +526,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
             shouldFetchMore = false;
           }
         }
-        console.log(allPlaylists);
         setFetchedPlayLists(true)
         setIsLoading(false)
         return allPlaylists;
@@ -553,7 +542,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
   
       const addTrackToPlaylist = async (playlistId, trackUri) => {
         setClickedTrackIndex(null)
-        console.log(trackUri)
         const response = await fetch(`https://api.spotify.com/v1/playlists/${playlistId}/tracks`, {
           method: 'POST',
           headers: {
@@ -564,7 +552,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
         });
       
         if (response.ok) {
-          console.log(`Track added to playlist ${playlistId}`);
           setHoveringRenderedPlayLists(false)
         } else {
           console.error(`Error adding track to playlist: ${response.statusText}`);
@@ -602,7 +589,6 @@ const PlayList = ({ displayName, accessToken, chooseTrack, togglePlay, setToggle
             throw new Error(`Error removing track from playlist: ${response.statusText}`);
           }
           searchPlayList(id);
-          console.log('Track removed successfully from the playlist');
         } catch (error) {
           console.error(`Failed to remove track from playlist: ${error.message}`);
         }

@@ -1,15 +1,14 @@
 import '../styles/savedartists.css'
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import defaultProfileImg from '../assets/profile-avatar.png'
 
-const SavedArtists = ({ accessToken, displayName }) => {
+const SavedArtists = ({ accessToken }) => {
 
     const [followedArtists, setFollowedArtists] = useState([])
     const [isLoading, setIsLoading] = useState(true)
     const [noResults, setNoResults] = useState(false)
     const [fetchedArtists, setFetchedArtists] = useState(false)
-    const location = useLocation()
 
     const handleClick = (event) => {
         event.preventDefault();
@@ -47,7 +46,6 @@ const SavedArtists = ({ accessToken, displayName }) => {
                 shouldFetchMore = false;
             }
         }
-        console.log(allArtists);
         setFetchedArtists(true)
         if (allArtists.length === 0) {
             setTimeout(() => {

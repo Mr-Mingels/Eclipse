@@ -55,7 +55,6 @@ const Search = ({getSearchInput, code, displayName }) => {
                 getSearchInput(input)
                 navigate('/search');
             } else {
-                console.log('sent info')
                 setViewSelectorHeader(true)
                 getSearchInput(input)
                 if(location.pathname === '/search') {
@@ -243,21 +242,5 @@ const Search = ({getSearchInput, code, displayName }) => {
             </>
     )
 }
-
-/*
-var artistId = await fetch(`https://api.spotify.com/v1/search?q=${searchInput}&type=artist`, searchParameters)
-            .then(response => response.json())
-            .then(data => { return data.artists.items[0].id })
-
-            console.log(`Artist Id is ${artistId}`)
-
-        var returnedAlbums = await fetch(`https://api.spotify.com/v1/artists/${artistId}/albums?include_group=album&market=US&limit=50`
-        , searchParameters)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            setAlbums(data.items)
-        })
-*/
 
 export default Search
