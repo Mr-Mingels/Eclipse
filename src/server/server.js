@@ -67,7 +67,7 @@ app.listen(PORT, () => {
 
 
   app.get('/', (req, res) => {
-    res.send('Hello, world!');
+    res.send(process.env.REDIRECT_URI);
   });
   
 
