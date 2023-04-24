@@ -22,7 +22,6 @@ export default function useAuth(code) {
                 })
                 .catch((err) => {
                   console.error('Error in /login:', err);
-                  res.sendStatus(400)
               })              
             }
           },[code])
@@ -41,7 +40,6 @@ export default function useAuth(code) {
             })
             .catch((err) => {
               console.error('Error in /refresh:', err);
-              res.sendStatus(400)
           })
         }, (expiresIn - 60) * 1000);
       
