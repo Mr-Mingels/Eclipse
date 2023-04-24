@@ -11,7 +11,7 @@ export default function useAuth(code) {
 
     useEffect(() => {
             if(code) {
-                axios.post('http://localhost:3001/login', {
+                axios.post('https://eclipse-spotify-clone.herokuapp.com/login', {
                     code,
                 })
                 .then(res => {
@@ -32,7 +32,7 @@ export default function useAuth(code) {
         const interval = setInterval(() => {
             console.log('hi')
           axios
-            .post("http://localhost:3001/refresh", {
+            .post("https://eclipse-spotify-clone.herokuapp.com/refresh", {
               refreshToken,
             })
             .then((res) => {
