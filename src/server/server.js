@@ -29,7 +29,7 @@ app.post('/refresh', (req, res) => {
            })
         })
         .catch((err) => {
-            console.log(err)
+            console.error('Refresh error:', err.message)
             res.sendStatus(400)
         })
 })
@@ -55,7 +55,7 @@ app.post('/login', (req, res) => {
         console.log('in then')
     })
     .catch((err) => {
-        console.log(err)
+        console.error('Login error:', err.message)
         res.sendStatus(400)
     })
 })
