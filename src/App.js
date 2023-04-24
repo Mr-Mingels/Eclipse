@@ -84,6 +84,10 @@ function App({ getAccessToken, getTrack, togglePlay, setTogglePlay, theCurrentTr
     setSavedPlayListData(data)
   }
 
+  useEffect(() => {
+    console.log(accessToken)
+  },[accessToken])
+
   return (
       <Suspense fallback={<div className='loadingScreen'></div>}>
         {location.pathname !== '/login' && location.pathname !== '/signup' && <SideBar savedPlayListData={savedPlayListData} 
