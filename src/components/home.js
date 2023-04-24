@@ -165,7 +165,7 @@ const Home = ({ displayName, accessToken }) => {
                     )}
                 </nav>
                 <div className="heroImgWrapper">
-                    <img className="heroImg" src={HeroImg3}></img>
+                    <img className="heroImg" src={HeroImg3} onLoad={handleImageLoad}></img>
                     {!isLoading && <h1 className="heroImgTitle">Eclipse</h1>}
                 </div>
                 <h1 className='homeTopArtistsTitle'>Top Artists</h1>
@@ -177,9 +177,9 @@ const Home = ({ displayName, accessToken }) => {
                     <Link className='linkHomeTopArtistBoxWrapper' to={`/artist/${artist.id}`} onMouseEnter={handleClick} key={index}>
                         <div className="homeArtistBox">
                         {artist.images.length > 0 ? (
-                            <img loading="lazy" className="homeArtistImg" onLoad={handleImageLoad} src={artist.images[0].url} />
+                            <img loading="lazy" className="homeArtistImg" src={artist.images[0].url} />
                         ) : (
-                            <img loading="lazy" className="homeArtistImg" onLoad={handleImageLoad} src={defaultProfileImg} />
+                            <img loading="lazy" className="homeArtistImg" src={defaultProfileImg} />
                         )}
                         <p className="homeArtistName">{artist.name}</p>
                         <span className="homeCategoryType">{artist.type.charAt(0).toUpperCase() + artist.type.slice(1)}</span>
@@ -196,9 +196,9 @@ const Home = ({ displayName, accessToken }) => {
                         <Link className='linkHomePlayListBoxWrapper' key={index} to={`/playlist/${playlists.id}`} onMouseDown={handleClick}>
                             <div className="homePlayListBox" key={index}>
                             {playlists.images.length > 0 ? (
-                                <img loading="lazy" className="homePlayListCoverImg" onLoad={handleImageLoad} src={playlists.images[0].url} />  
+                                <img loading="lazy" className="homePlayListCoverImg" src={playlists.images[0].url} />  
                             ) : (
-                                <img loading="lazy" className="homePlayListCoverImg" onLoad={handleImageLoad} src={musicalNote}/>
+                                <img loading="lazy" className="homePlayListCoverImg" src={musicalNote}/>
                             )}
                                 <p className="homePlayListName">{playlists.name}</p>
                                 {playlists.owner === null ? (
@@ -219,9 +219,9 @@ const Home = ({ displayName, accessToken }) => {
                        <Link className='linkHomeAlbumBoxWrapper' to={`/album/${album.id}`} key={index} onMouseDown={handleClick}>
                         <div className="homeAlbumBox">
                        {album.images.length > 0 ? (
-                         <img loading="lazy" className="homeAlbumCoverImg" onLoad={handleImageLoad} src={album.images[0].url} />
+                         <img loading="lazy" className="homeAlbumCoverImg" src={album.images[0].url} />
                        ) : (
-                         <img loading="lazy" className="homeAlbumCoverImg" onLoad={handleImageLoad} src={musicalNote} />
+                         <img loading="lazy" className="homeAlbumCoverImg" src={musicalNote} />
                        )}
                          <p className="homeAlbumName">{album.name}</p>
                          <p className="homeAlbumDataAndArtistName">{album.release_date.slice(0, 4)} <span className='circleElement'>●</span> {album.artists[0].name}</p>
