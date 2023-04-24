@@ -70,16 +70,22 @@ const SongSearch = ({ searchInput, accessToken, chooseTrack, togglePlay, setTogg
       try {
         const tracks = [];
         let offset = 0;
-        while (offset < 200) { // fetch up to 200 tracks (4 requests of 50 tracks)
-          const response = await fetch(
-            `https://api.spotify.com/v1/search?q=${input}&type=track&limit=50&offset=${offset}`,
-            searchParameters
-          );
-          const data = await response.json();
-          console.log(data)
-          tracks.push(...data.tracks.items);
-          offset += 50;
-        }
+        let shouldFetchMore = true;
+    while (offset < 200 && shouldFetchMore) { // fetch up to 200 tracks (4 requests of 50 tracks)
+      const response = await fetch(
+        `https://api.spotify.com/v1/search?q=${input}&type=track&limit=50&offset=${offset}`,
+        searchParameters
+      );
+      const data = await response.json();
+      console.log(data)
+      tracks.push(...data.tracks.items);
+
+      if (data.tracks.items.length < 50) {
+        shouldFetchMore = false;
+      }
+
+      offset += 50;
+    }
       
         const sortedTracks = tracks
           .sort((a, b) => b.popularity - a.popularity) // sort by popularity, descending
