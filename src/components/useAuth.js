@@ -22,7 +22,6 @@ export default function useAuth(code) {
                 })
                 .catch((err) => {
                     console.log(err)
-                    window.location = '/login'
                 })
             }
           },[code])
@@ -41,7 +40,6 @@ export default function useAuth(code) {
             })
             .catch((err) => {
               console.log(err);
-              window.location = "/login";
             });
         }, (expiresIn - 60) * 1000);
       
