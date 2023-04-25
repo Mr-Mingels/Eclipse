@@ -34,7 +34,7 @@ const Player = ({accessToken, trackUri, getPlay, getCurrentTrackPlaying, toggleP
                 'Authorization': `Bearer ${accessToken}` 
             }
         })
-            .then(response => setIsPremium(true))
+            .then(response => setIsPremium(response.data.product === 'premium'))
             .catch((err) => {
                 console.log(err);
               });
